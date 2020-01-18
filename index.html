@@ -5,10 +5,195 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>David Nelson</title>
 
-  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" href="./css/glider.min.css">
+  <script src="https://kit.fontawesome.com/8a6487ae17.js" crossorigin="anonymous"></script>
 </head>
 <body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a 
+      data-scroll
+      href="#projects"
+      class="button button--primary">
+      Projects
+    </a>
+    <a 
+      data-scroll
+      href="#skills"
+      class="button button--primary">
+      Skills
+    </a>
+    <a 
+      data-scroll
+      href="#contact"
+      class="button button--primary">
+      Contact
+    </a>
+  </nav>
 
-  <script src="main.js"></script>
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero hero__item hero__title-container">
+      <h1 class="hero__title">
+        David Nelson
+      </h1>
+      <p class="hero__subtitle">Software developer</p>
+    </div>
+    <div 
+      data-lax-translate-y="0 0, 400 -375"
+      class="lax hero hero__item hero__1">
+    </div>
+    <div 
+      data-lax-translate-y="0 0, 400 -275"
+      class="lax hero hero__item hero__2">
+    </div>
+    <div 
+      data-lax-translate-y="0 0, 400 -175"
+      class="lax hero hero__item hero__3">
+    </div>
+  </div>
+
+  <!-- Arrow down -->
+  <div class="arrow-down">
+    <a
+      data-scroll
+      href="#projects">
+      <i class="fas fa-chevron-down fa-lg arrow-down--accent"></i>
+    </a>
+  </div>
+
+  <!-- Projects -->
+  <div class="container line-break__container" id="projects">
+    <h2 class="line-break">
+      <span class="line-break__text">
+        Projects
+      </span>
+    </h2>
+  </div>
+
+  <!-- Air KOALAty Report -->
+  <div class="container">
+    <div class="lax project__container" data-lax-preset="fadeIn">
+
+      <!-- Title -->
+      <div class="project__title__container">
+        <h3 class="project__title">Air KOALAty Report</h3>
+        <p class="project__subtitle">A place to find the air quality and weather of cities made with Angular 7, Express, MongoDB, and Auth0.</p>
+      </div>
+
+      <div class="grid">
+        <!-- Images -->
+        <div class="project__image__container">
+
+          <div class="glider-contain project__image">
+            <div class="glider">
+              <figure class="project__image__figure">
+                <img class="project__image__item" src="./images/projects/air_koalaty_report/air-p1.jpeg" alt="Air KOALAty Report landing page">
+              </figure>
+              <figure class="project__image__figure">
+                <img class="project__image__item" src="./images/projects/air_koalaty_report/air-p2.jpeg" alt="Air KOALAty Report google autocomplete places">
+              </figure>
+              <figure class="project__image__figure">
+                <img class="project__image__item" src="./images/projects/air_koalaty_report/air-p3.jpeg" alt="Air KOALAty Report login with AuthO">
+              </figure>
+              <figure class="project__image__figure">
+                <img class="project__image__item" src="./images/projects/air_koalaty_report/air-p4.jpeg" alt="Air KOALAty Report list page">
+              </figure>
+            </div>
+
+            <div class="project__expand" id="myImg">
+              <i class="fas fa-expand-arrows-alt"></i>
+            </div>
+  
+            <button role="button" aria-label="Previous" class="glider-prev">
+              <i class="fa fa-chevron-left"></i>
+            </button>
+            <button role="button" aria-label="Next" class="glider-next">
+              <i class="fa fa-chevron-right"></i>
+            </button>
+            <div role="tablist" class="dots" id="dots">
+              <button class="glider-dot" data-index="0" aria-label="Page 1"></button>
+              <button class="glider-dot" data-index="1" aria-label="Page 2"></button>
+              <button class="glider-dot" data-index="2" aria-label="Page 3"></button>
+              <button class="glider-dot" data-index="3" aria-label="Page 4"></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Info -->
+        <div class="project__info">
+          <h4 class="project__info__title">
+            Authorization
+          </h4>
+
+          <p class="project__info__subtitle">
+            Auth0 is used for authorization to let users save their favorite cities to their list.
+          </p>
+
+          <h4 class="project__info__title">
+            Angular Material
+          </h4>
+
+          <p class="project__info__subtitle">
+            The card, button, theme, and navbar components are Angular Material.
+          </p>
+
+          <h4 class="project__info__title">
+            Api
+          </h4>
+
+          <p class="project__info__subtitle">
+            The api is from Air Visual and it provides the weather and air quality index for different cities.
+          </p>
+
+          <h4 class="project__info__title">
+            Back end
+          </h4>
+
+          <p class="project__info__subtitle">
+            The back end uses Express, Mongoose, and MongoDB to send requests to the API and to update the user's list.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="project__buttons">
+        <a href="https://airkoalatyreport.herokuapp.com/" target="_blank" class="button button--secondary">
+          Site
+        </a>
+        <a href="https://github.com/davidmarknelson/air-koalaty-report" target="_blank" class="button button--secondary">
+          Code
+        </a>
+      </div>
+    </div>
+    
+  </div>
+
+  <!-- The Modal -->
+  <div id="imgModal" class="modal">
+
+    <!-- The Close Button -->
+    <span class="modal__close">
+      <i class="fas fa-times"></i>
+    </span>
+
+    <!-- Modal Content (The Image) -->
+    <img class="modal__content" id="img01">
+  </div>
+
+
+  <!-- Scripts -->
+  <!-- ========================== -->
+  <!-- Parallax -->
+  <script src="https://cdn.jsdelivr.net/npm/lax.js" ></script>
+  <!-- Smooth scroll -->
+  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
+  <!-- Glider js -->
+  <script src="./assets/glider.min.js"></script>
+  <!-- Main must be last to initialize other libraries -->
+  <script src="./assets/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,308 @@
+:root {
+  --color-primary: #FFC700;
+  --color-dark-black: #191919;
+  --color-light-black: #2E2E2E;
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-light-gray: #ffffff;
+}
+
+*, *::before, *::before {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-dark-black);
+  color: var(--color-white);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+// ==========================
+// Navbar
+// ==========================
+.navbar {
+  z-index: 30;
+  position: fixed;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  transition: top 0.3s;
+}
+
+// ==========================
+// Buttons
+// ==========================
+.button {
+  padding: .75rem;
+  margin: .5rem;
+  text-decoration: none;
+  border-radius: .75rem;;
+  width: 5rem;
+  text-align: center;
+  border: none;
+
+  &--primary {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    
+    &:hover, &:active {
+      background-color: var(--color-primary);
+      color: var(--color-black);
+    }
+  }
+
+
+  &--secondary {
+    background-color: var(--color-primary);
+    color: var(--color-black);
+    
+    &:hover, &:active {
+      background-color: var(--color-primary);
+      color: var(--color-black);
+    }
+  }
+
+}
+
+// ==========================
+// Hero
+// ==========================
+.hero {
+  height: 95vh;
+  position: relative;
+
+  &__title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__title {
+    z-index: 3;
+    font-size: 3rem;
+    text-align: center;
+    color: var(--color-primary);
+  }
+
+  &__subtitle {
+    z-index: 3;
+    text-align: center;
+    font-size: 1.5rem;
+
+  }
+
+  &__item {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: contain;
+    background-position: bottom;
+  }
+
+  &__1 {
+    background-image: url("../images/backgrounds/circles.png");
+  }
+  &__2 {
+    background-image: url("../images/backgrounds/crosses.png");
+  }
+  &__3 {
+    background-image: url("../images/backgrounds/triangles.png");
+  }
+}
+
+// ==========================
+// Icons
+// ==========================
+
+.arrow-down {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+
+  &--accent {
+    color: var(--color-primary);
+  }
+}
+
+// ==========================
+// Container
+// ==========================
+
+.container {
+  max-width: 1344px;
+  padding: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// ==========================
+// Grid
+// ==========================
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 1.5rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .grid {
+    grid-template-columns: none;
+    grid-template-rows: repeat(2, auto);
+    grid-column-gap: none;
+    grid-row-gap: 1.5rem;
+  }
+}
+
+// ==========================
+// Line break
+// ==========================
+.line-break {
+  border-bottom: 1px solid var(--color-white);
+  height: 15px;
+  text-align: center;
+  margin-top: 0;
+
+  &__text {
+    background: var(--color-dark-black);
+    padding: 0 15px;
+    color: var(--color-primary);
+  }
+
+  &__container {
+    margin-top: 200px;
+    margin-bottom: 125px;
+  }
+}
+
+
+// ==========================
+// Projects
+// ==========================
+
+.project {
+  &__container {
+    background-color: var(--color-light-black);
+    border-radius: .75rem;
+    padding: 1rem;
+  }
+
+  &__title {
+    color: var(--color-primary);
+    
+    &__container {
+      margin-top: 2.5rem;
+      margin-bottom: 2.5rem;
+      text-align: center;
+    }
+  }
+
+  &__image {
+    overflow: hidden;
+
+    &__container {
+      overflow: hidden;
+    }
+
+    &__figure {
+      margin: 0;
+    }
+
+    &__item {
+      border-radius: .75rem;
+    }
+  }
+
+  &__expand {
+    position: absolute;
+    right: .5rem;
+    bottom: 2rem;
+    background-color: var(--color-light-black);
+    padding: .75rem;
+    border-radius: .5rem;
+  }
+
+  &__expand:hover {
+    background-color: var(--color-primary);
+    color: var(--color-black);
+    cursor: pointer;
+  }
+
+  &__info {
+    &__title {
+      margin-top: 0;
+      margin-bottom: .25rem;
+    }
+
+    &__subtitle {
+      margin-top: .25rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+// ==========================
+// Modal
+// ==========================
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 40; /* Sit on top */
+  // padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+
+  /* Modal Content (Image) */
+  &__content {
+    display: block;
+    width: 80%;
+    max-width: 1000px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Add Animation - Zoom in the Modal */
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+
+  /* The Close Button */
+  &__close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+
+    &:hover, &:focus {
+      color: #bbb;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+}
+
+@keyframes zoom {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 768px){
+  .modal__content {
+    width: 100%;
+  }
+}
