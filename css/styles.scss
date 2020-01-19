@@ -1,10 +1,12 @@
 :root {
   --color-primary: #FFC700;
+  --color-light-primary: #ffeaa0;
   --color-dark-black: #191919;
   --color-light-black: #2E2E2E;
   --color-black: #000000;
   --color-white: #ffffff;
-  --color-light-gray: #ffffff;
+  --color-light-gray: #dddddd;
+  --color-dark-gray: #555555;
 }
 
 *, *::before, *::before {
@@ -58,7 +60,7 @@ body {
     color: var(--color-black);
     
     &:hover, &:active {
-      background-color: var(--color-primary);
+      background-color: var(--color-light-primary);
       color: var(--color-black);
     }
   }
@@ -144,7 +146,7 @@ body {
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: 1.5rem;
+  grid-column-gap: 2rem;
 }
 
 @media only screen and (max-width: 768px) {
@@ -152,7 +154,7 @@ body {
     grid-template-columns: none;
     grid-template-rows: repeat(2, auto);
     grid-column-gap: none;
-    grid-row-gap: 1.5rem;
+    grid-row-gap: 2rem;
   }
 }
 
@@ -161,19 +163,19 @@ body {
 // ==========================
 .line-break {
   border-bottom: 1px solid var(--color-white);
-  height: 15px;
+  height: .8rem;
   text-align: center;
   margin-top: 0;
 
   &__text {
     background: var(--color-dark-black);
-    padding: 0 15px;
+    padding: 0 .8rem;
     color: var(--color-primary);
   }
 
   &__container {
-    margin-top: 200px;
-    margin-bottom: 125px;
+    margin-top: 8rem;
+    margin-bottom: 8rem;
   }
 }
 
@@ -186,7 +188,8 @@ body {
   &__container {
     background-color: var(--color-light-black);
     border-radius: .75rem;
-    padding: 1rem;
+    padding: 2rem;
+    margin-bottom: 6rem;
   }
 
   &__title {
@@ -201,10 +204,6 @@ body {
 
   &__image {
     overflow: hidden;
-
-    &__container {
-      overflow: hidden;
-    }
 
     &__figure {
       margin: 0;
@@ -239,6 +238,7 @@ body {
     &__subtitle {
       margin-top: .25rem;
       margin-bottom: 2rem;
+      color: var(--color-light-gray);
     }
   }
 
@@ -249,37 +249,139 @@ body {
 }
 
 // ==========================
+// Skills
+// ==========================
+.skills {
+  &__container {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  &__item {
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+
+  &__content {
+    color: var(--color-light-gray);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .skills__container {
+    display: block;
+  }
+}
+
+// ==========================
+// Contact
+// ==========================
+.contact {
+  text-align: center;
+  color: var(--color-light-gray);
+
+  &__icon-title {
+    text-align: center;
+  }
+
+  &__icons {
+    text-decoration: none;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  &__icon-container {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+// ==========================
+// Footer
+// ==========================
+.link {
+  color: var(--color-primary);
+}
+.link:hover {
+  color: var(--color-light-primary);
+}
+
+// ==========================
+// Footer
+// ==========================
+.footer {
+  margin-top: 16rem;
+  background-color: var(--color-light-black);
+  height: 16rem;
+  text-align: center;
+
+  &__content-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+// ==========================
+// Scroll to top button
+// ==========================
+#toTopButton {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 1rem; /* Place the button at the bottom of the page */
+  right: 1rem; /* Place the button 30px from the right */
+  z-index: 20; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: var(--color-black); /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 1rem; /* Some padding */
+  border-radius: .75rem; /* Rounded corners */
+}
+
+#toTopButton:hover {
+  background-color: var(--color-dark-gray); /* Add a dark-grey background on hover */
+}
+
+
+// ==========================
 // Modal
 // ==========================
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 40; /* Sit on top */
-  // padding-top: 100px; /* Location of the box */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
   background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  transition: opacity 2s;
 
-  /* Modal Content (Image) */
-  &__content {
-    display: block;
+  // Image container
+  &__container {
     width: 80%;
-    max-width: 1000px;
+    margin: 0 auto;
+    max-height: calc(100vh - 40px);
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* Add Animation - Zoom in the Modal */
+    height: auto;
+  }
+
+  &__animate {
+    // Animation - Zoom in the Modal
     animation-name: zoom;
-    animation-duration: 0.6s;
+    animation-duration: 0.5s;
   }
 
   /* The Close Button */
   &__close {
     position: absolute;
+    z-index: 41;
     top: 15px;
     right: 35px;
     color: #f1f1f1;
@@ -302,7 +404,7 @@ body {
 
 /* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 768px){
-  .modal__content {
+  .modal__container {
     width: 100%;
   }
 }

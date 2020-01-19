@@ -1,10 +1,12 @@
 :root {
   --color-primary: #FFC700;
+  --color-light-primary: #ffeaa0;
   --color-dark-black: #191919;
   --color-light-black: #2E2E2E;
   --color-black: #000000;
   --color-white: #ffffff;
-  --color-light-gray: #ffffff;
+  --color-light-gray: #dddddd;
+  --color-dark-gray: #555555;
 }
 
 *, *::before, *::before {
@@ -59,7 +61,7 @@ body {
 }
 
 .button--secondary:hover, .button--secondary:active {
-  background-color: var(--color-primary);
+  background-color: var(--color-light-primary);
   color: var(--color-black);
 }
 
@@ -142,7 +144,7 @@ body {
   display: grid;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: 1.5rem;
+  grid-column-gap: 2rem;
 }
 
 @media only screen and (max-width: 768px) {
@@ -152,32 +154,33 @@ body {
     -ms-grid-rows: (auto)[2];
         grid-template-rows: repeat(2, auto);
     grid-column-gap: none;
-    grid-row-gap: 1.5rem;
+    grid-row-gap: 2rem;
   }
 }
 
 .line-break {
   border-bottom: 1px solid var(--color-white);
-  height: 15px;
+  height: .8rem;
   text-align: center;
   margin-top: 0;
 }
 
 .line-break__text {
   background: var(--color-dark-black);
-  padding: 0 15px;
+  padding: 0 .8rem;
   color: var(--color-primary);
 }
 
 .line-break__container {
-  margin-top: 200px;
-  margin-bottom: 125px;
+  margin-top: 8rem;
+  margin-bottom: 8rem;
 }
 
 .project__container {
   background-color: var(--color-light-black);
   border-radius: .75rem;
-  padding: 1rem;
+  padding: 2rem;
+  margin-bottom: 6rem;
 }
 
 .project__title {
@@ -191,10 +194,6 @@ body {
 }
 
 .project__image {
-  overflow: hidden;
-}
-
-.project__image__container {
   overflow: hidden;
 }
 
@@ -229,6 +228,7 @@ body {
 .project__info__subtitle {
   margin-top: .25rem;
   margin-bottom: 2rem;
+  color: var(--color-light-gray);
 }
 
 .project__buttons {
@@ -238,6 +238,115 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.skills__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.skills__item {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.skills__content {
+  color: var(--color-light-gray);
+}
+
+@media only screen and (max-width: 768px) {
+  .skills__container {
+    display: block;
+  }
+}
+
+.contact {
+  text-align: center;
+  color: var(--color-light-gray);
+}
+
+.contact__icon-title {
+  text-align: center;
+}
+
+.contact__icons {
+  text-decoration: none;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.contact__icon-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.link {
+  color: var(--color-primary);
+}
+
+.link:hover {
+  color: var(--color-light-primary);
+}
+
+.footer {
+  margin-top: 16rem;
+  background-color: var(--color-light-black);
+  height: 16rem;
+  text-align: center;
+}
+
+.footer__content-container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#toTopButton {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Fixed/sticky position */
+  bottom: 1rem;
+  /* Place the button at the bottom of the page */
+  right: 1rem;
+  /* Place the button 30px from the right */
+  z-index: 20;
+  /* Make sure it does not overlap */
+  border: none;
+  /* Remove borders */
+  outline: none;
+  /* Remove outline */
+  background-color: var(--color-black);
+  /* Set a background color */
+  color: white;
+  /* Text color */
+  cursor: pointer;
+  /* Add a mouse pointer on hover */
+  padding: 1rem;
+  /* Some padding */
+  border-radius: .75rem;
+  /* Rounded corners */
+}
+
+#toTopButton:hover {
+  background-color: var(--color-dark-gray);
+  /* Add a dark-grey background on hover */
 }
 
 .modal {
@@ -253,32 +362,35 @@ body {
   /* Full width */
   height: 100%;
   /* Full height */
-  overflow: auto;
-  /* Enable scroll if needed */
   background-color: rgba(0, 0, 0, 0.9);
   /* Black w/ opacity */
-  /* Modal Content (Image) */
+  -webkit-transition: opacity 2s;
+  transition: opacity 2s;
   /* The Close Button */
 }
 
-.modal__content {
-  display: block;
+.modal__container {
   width: 80%;
-  max-width: 1000px;
+  margin: 0 auto;
+  max-height: calc(100vh - 40px);
   position: fixed;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  /* Add Animation - Zoom in the Modal */
+  height: auto;
+}
+
+.modal__animate {
   -webkit-animation-name: zoom;
           animation-name: zoom;
-  -webkit-animation-duration: 0.6s;
-          animation-duration: 0.6s;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
 }
 
 .modal__close {
   position: absolute;
+  z-index: 41;
   top: 15px;
   right: 35px;
   color: #f1f1f1;
@@ -314,7 +426,7 @@ body {
 
 /* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 768px) {
-  .modal__content {
+  .modal__container {
     width: 100%;
   }
 }
