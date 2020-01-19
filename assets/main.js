@@ -49,6 +49,10 @@ let scrollToTopBtn = document.getElementById("toTopButton");
 
 // Hide or show navbar
 function showNavbar() {
+  if (document.body.scrollTop < 50) {
+    return document.querySelector(".navbar").style.top = "0";
+  }
+
   let currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
     document.querySelector(".navbar").style.top = "0";
@@ -60,7 +64,7 @@ function showNavbar() {
 
 // Scroll to top button
 function showScrollBtn() {
-  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+  if (document.body.scrollTop > 300) {
     scrollToTopBtn.style.display = "block";
   } else {
     scrollToTopBtn.style.display = "none";
