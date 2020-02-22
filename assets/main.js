@@ -2,37 +2,32 @@
 // ==========================
 // laxxx.js
 // ==========================
-window.onload = function() {
-	lax.setup() // init
+lax.setup(); // init
 
-	const updateLax = () => {
-    lax.update(window.scrollY)
-		window.requestAnimationFrame(updateLax)
-	}
+const updateLax = () => {
+  lax.update(window.scrollY);
+  window.requestAnimationFrame(updateLax);
+};
 
-	window.requestAnimationFrame(updateLax)
-}
+window.requestAnimationFrame(updateLax);
 
 // ==========================
 // glider.js
 // ==========================
-window.addEventListener("load", function(){
-  let projectGliders = document.querySelectorAll(".projectGlider");
+let projectGliders = document.querySelectorAll(".projectGlider");
 
-  for (let i = 0; i < projectGliders.length; i++) {
-    new Glider(projectGliders[i], {
-      slidesToShow: 1,
-      dots: `#dots${i}`,
-      draggable: true,
-      arrows: {
-        prev: `.glider-prev-${i}`,
-        next: `.glider-next-${i}`
-      },
-      rewind: true
-    });
-  }
-
-});
+for (let i = 0; i < projectGliders.length; i++) {
+  new Glider(projectGliders[i], {
+    slidesToShow: 1,
+    dots: `#dots${i}`,
+    draggable: true,
+    arrows: {
+      prev: `.glider-prev-${i}`,
+      next: `.glider-next-${i}`
+    },
+    rewind: true
+  });
+}
 
 // ==========================
 // smooth-scroll
@@ -50,14 +45,14 @@ let scrollToTopBtn = document.getElementById("toTopButton");
 // Hide or show navbar
 function showNavbar() {
   if (document.body.scrollTop < 50) {
-    return document.querySelector(".navbar").style.top = "0";
+    return (document.querySelector(".navbar").style.top = "0");
   }
 
   let currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
     document.querySelector(".navbar").style.top = "0";
   } else {
-    document.querySelector(".navbar").style.top ="-5rem";
+    document.querySelector(".navbar").style.top = "-5rem";
   }
   prevScrollpos = currentScrollPos;
 }
@@ -74,7 +69,7 @@ function showScrollBtn() {
 window.onscroll = function() {
   showNavbar();
   showScrollBtn();
-}
+};
 
 // ==========================
 // Image data
@@ -82,73 +77,73 @@ window.onscroll = function() {
 const imgData = {
   airKoalaty: [
     {
-      src: "./images/projects/air-koalaty-report/air-p1.jpeg",
+      src: "./images/projects/air-koalaty-report/air-p1.jpg",
       alt: "Air KOALAty Report landing page"
     },
     {
-      src: "./images/projects/air-koalaty-report/air-p2.jpeg",
+      src: "./images/projects/air-koalaty-report/air-p2.jpg",
       alt: "Air KOALAty Report google autocomplete places"
     },
     {
-      src: "./images/projects/air-koalaty-report/air-p3.jpeg",
+      src: "./images/projects/air-koalaty-report/air-p3.jpg",
       alt: "Air KOALAty Report login with AuthO"
     },
     {
-      src: "./images/projects/air-koalaty-report/air-p4.jpeg",
+      src: "./images/projects/air-koalaty-report/air-p4.jpg",
       alt: "Air KOALAty Report list page"
-    },
+    }
   ],
   pokeSurvey: [
     {
-      src: "./images/projects/poke-survey/poke-survey-p1.jpeg", 
+      src: "./images/projects/poke-survey/poke-survey-p1.jpg",
       alt: "Poke-Survey landing page"
     },
     {
-      src: "./images/projects/poke-survey/poke-survey-p2.jpeg", 
+      src: "./images/projects/poke-survey/poke-survey-p2.jpg",
       alt: "Poke-Survey vote page"
     },
     {
-      src: "./images/projects/poke-survey/poke-survey-p3.jpeg", 
+      src: "./images/projects/poke-survey/poke-survey-p3.jpg",
       alt: "Poke-Survey results page"
     },
     {
-      src: "./images/projects/poke-survey/poke-survey-p4.jpeg", 
+      src: "./images/projects/poke-survey/poke-survey-p4.jpg",
       alt: "Poke-Survey contact page"
     }
   ],
   portfolioV1: [
     {
-      src: "./images/projects/portfolio-v1/portfolio-p1.jpg", 
+      src: "./images/projects/portfolio-v1/portfolio-p1.jpg",
       alt: "Portfolio v1 landing page"
     },
     {
-      src: "./images/projects/portfolio-v1/portfolio-p2.jpg", 
+      src: "./images/projects/portfolio-v1/portfolio-p2.jpg",
       alt: "Portfolio v1 contact form"
-    }, 
+    },
     {
-      src: "./images/projects/portfolio-v1/portfolio-p3.jpeg", 
+      src: "./images/projects/portfolio-v1/portfolio-p3.jpg",
       alt: "Portfolio v1 unit tests"
     },
     {
-      src: "./images/projects/portfolio-v1/portfolio-p4.jpeg", 
+      src: "./images/projects/portfolio-v1/portfolio-p4.jpg",
       alt: "Portfolio v1 cypress tests"
     }
   ],
   shareFamilyRecipes: [
     {
-      src: "./images/projects/share-family-recipes/sfr-p1.jpg", 
+      src: "./images/projects/share-family-recipes/sfr-p1.jpg",
       alt: "Share family recipes landing page with search bar"
-    }, 
+    },
     {
-      src: "./images/projects/share-family-recipes/sfr-p2.jpg", 
+      src: "./images/projects/share-family-recipes/sfr-p2.jpg",
       alt: "Share family recipes list of recipes"
-    }, 
+    },
     {
-      src: "./images/projects/share-family-recipes/sfr-p3.jpg", 
+      src: "./images/projects/share-family-recipes/sfr-p3.jpg",
       alt: "Share family recipes figma design"
-    }, 
+    },
     {
-      src: "./images/projects/share-family-recipes/sfr-p4.jpg", 
+      src: "./images/projects/share-family-recipes/sfr-p4.jpg",
       alt: "Share family recipes unit, end-to-end, and back end tests"
     }
   ]
@@ -168,7 +163,7 @@ document.addEventListener("click", function(e) {
   if (e.target.matches(".modal__close") || e.target.matches(".modal")) {
     modal.style.display = "none";
   }
-})
+});
 
 function openModal(groupName) {
   // assign src and alt to modal images

@@ -1,15 +1,17 @@
 :root {
-  --color-primary: #FFC700;
+  --color-primary: #ffc700;
   --color-light-primary: #ffeaa0;
   --color-dark-black: #191919;
-  --color-light-black: #2E2E2E;
+  --color-light-black: #2e2e2e;
   --color-black: #000000;
   --color-white: #ffffff;
   --color-light-gray: #dddddd;
   --color-dark-gray: #555555;
 }
 
-*, *::before, *::before {
+*,
+*::before,
+*::before {
   box-sizing: border-box;
 }
 
@@ -36,10 +38,10 @@ body {
 // Buttons
 // ==========================
 .button {
-  padding: .75rem;
-  margin: .5rem;
+  padding: 0.75rem;
+  margin: 0.5rem;
   text-decoration: none;
-  border-radius: .75rem;;
+  border-radius: 0.75rem;
   width: 5rem;
   text-align: center;
   border: none;
@@ -47,24 +49,24 @@ body {
   &--primary {
     background-color: var(--color-black);
     color: var(--color-white);
-    
-    &:hover, &:active {
+
+    &:hover,
+    &:active {
       background-color: var(--color-primary);
       color: var(--color-black);
     }
   }
 
-
   &--secondary {
     background-color: var(--color-primary);
     color: var(--color-black);
-    
-    &:hover, &:active {
+
+    &:hover,
+    &:active {
       background-color: var(--color-light-primary);
       color: var(--color-black);
     }
   }
-
 }
 
 // ==========================
@@ -91,7 +93,6 @@ body {
     z-index: 3;
     text-align: center;
     font-size: 1.5rem;
-
   }
 
   &__item {
@@ -163,13 +164,13 @@ body {
 // ==========================
 .line-break {
   border-bottom: 1px solid var(--color-white);
-  height: .8rem;
+  height: 0.8rem;
   text-align: center;
   margin-top: 0;
 
   &__text {
     background: var(--color-dark-black);
-    padding: 0 .8rem;
+    padding: 0 0.8rem;
     color: var(--color-primary);
   }
 
@@ -179,7 +180,6 @@ body {
   }
 }
 
-
 // ==========================
 // Projects
 // ==========================
@@ -187,14 +187,14 @@ body {
 .project {
   &__container {
     background-color: var(--color-light-black);
-    border-radius: .75rem;
+    border-radius: 0.75rem;
     padding: 2rem;
     margin-bottom: 6rem;
   }
 
   &__title {
     color: var(--color-primary);
-    
+
     &__container {
       margin-top: 2.5rem;
       margin-bottom: 2.5rem;
@@ -210,17 +210,17 @@ body {
     }
 
     &__item {
-      border-radius: .75rem;
+      border-radius: 0.75rem;
     }
   }
 
   &__expand {
     position: absolute;
-    right: .5rem;
+    right: 0.5rem;
     bottom: 2rem;
     background-color: var(--color-light-black);
-    padding: .75rem;
-    border-radius: .5rem;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
   }
 
   &__expand:hover {
@@ -232,11 +232,11 @@ body {
   &__info {
     &__title {
       margin-top: 0;
-      margin-bottom: .25rem;
+      margin-bottom: 0.25rem;
     }
 
     &__subtitle {
-      margin-top: .25rem;
+      margin-top: 0.25rem;
       margin-bottom: 2rem;
       color: var(--color-light-gray);
     }
@@ -338,13 +338,14 @@ body {
   color: white; /* Text color */
   cursor: pointer; /* Add a mouse pointer on hover */
   padding: 1rem; /* Some padding */
-  border-radius: .75rem; /* Rounded corners */
+  border-radius: 0.75rem; /* Rounded corners */
 }
 
 #toTopButton:hover {
-  background-color: var(--color-dark-gray); /* Add a dark-grey background on hover */
+  background-color: var(
+    --color-dark-gray
+  ); /* Add a dark-grey background on hover */
 }
-
 
 // ==========================
 // Modal
@@ -357,7 +358,7 @@ body {
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
-  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
   transition: opacity 2s;
 
   // Image container
@@ -389,7 +390,8 @@ body {
     font-weight: bold;
     transition: 0.3s;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       color: #bbb;
       text-decoration: none;
       cursor: pointer;
@@ -398,12 +400,16 @@ body {
 }
 
 @keyframes zoom {
-  from {opacity: 0;}
-  to {opacity: 1;}
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 768px) {
   .modal__container {
     width: 100%;
   }
