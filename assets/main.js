@@ -12,6 +12,11 @@ const updateLax = () => {
 window.requestAnimationFrame(updateLax);
 
 // ==========================
+// smooth scroll
+// ==========================
+const scroll = new SmoothScroll('a[href*="#"]');
+
+// ==========================
 // glider.js
 // ==========================
 let projectGliders = document.querySelectorAll(".projectGlider");
@@ -30,13 +35,6 @@ for (let i = 0; i < projectGliders.length; i++) {
 
   glider.refresh(true);
 }
-
-// ==========================
-// smooth-scroll
-// ==========================
-let scroll = new SmoothScroll("a[href*='#']", {
-  speed: 500
-});
 
 // ==========================
 // Scroll functions
@@ -157,7 +155,6 @@ const imgData = {
 // ==========================
 function openModal(groupName) {
   // Get the modal
-
   let modal = document.getElementById("imgModal");
 
   // Get modal images
@@ -195,6 +192,7 @@ document.addEventListener("click", function(e) {
   ) {
     // Get the modal
     let modal = document.getElementById("imgModal");
+    // set modal display to none
     modal.style.display = "none";
   }
 });

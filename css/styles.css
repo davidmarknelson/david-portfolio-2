@@ -1,15 +1,17 @@
 :root {
-  --color-primary: #FFC700;
+  --color-primary: #ffc700;
   --color-light-primary: #ffeaa0;
   --color-dark-black: #191919;
-  --color-light-black: #2E2E2E;
+  --color-light-black: #2e2e2e;
   --color-black: #000000;
   --color-white: #ffffff;
   --color-light-gray: #dddddd;
   --color-dark-gray: #555555;
 }
 
-*, *::before, *::before {
+*,
+*::before,
+*::before {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -36,10 +38,10 @@ body {
 }
 
 .button {
-  padding: .75rem;
-  margin: .5rem;
+  padding: 0.75rem;
+  margin: 0.5rem;
   text-decoration: none;
-  border-radius: .75rem;
+  border-radius: 0.75rem;
   width: 5rem;
   text-align: center;
   border: none;
@@ -124,8 +126,6 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
 }
 
 .arrow-down--accent {
@@ -160,14 +160,14 @@ body {
 
 .line-break {
   border-bottom: 1px solid var(--color-white);
-  height: .8rem;
+  height: 0.8rem;
   text-align: center;
   margin-top: 0;
 }
 
 .line-break__text {
   background: var(--color-dark-black);
-  padding: 0 .8rem;
+  padding: 0 0.8rem;
   color: var(--color-primary);
 }
 
@@ -178,7 +178,7 @@ body {
 
 .project__container {
   background-color: var(--color-light-black);
-  border-radius: .75rem;
+  border-radius: 0.75rem;
   padding: 2rem;
   margin-bottom: 6rem;
 }
@@ -202,16 +202,16 @@ body {
 }
 
 .project__image__item {
-  border-radius: .75rem;
+  border-radius: 0.75rem;
 }
 
 .project__expand {
   position: absolute;
-  right: .5rem;
+  right: 0.5rem;
   bottom: 2rem;
   background-color: var(--color-light-black);
-  padding: .75rem;
-  border-radius: .5rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
 }
 
 .project__expand:hover {
@@ -222,11 +222,11 @@ body {
 
 .project__info__title {
   margin-top: 0;
-  margin-bottom: .25rem;
+  margin-bottom: 0.25rem;
 }
 
 .project__info__subtitle {
-  margin-top: .25rem;
+  margin-top: 0.25rem;
   margin-bottom: 2rem;
   color: var(--color-light-gray);
 }
@@ -340,7 +340,7 @@ body {
   /* Add a mouse pointer on hover */
   padding: 1rem;
   /* Some padding */
-  border-radius: .75rem;
+  border-radius: 0.75rem;
   /* Rounded corners */
 }
 
