@@ -17,7 +17,7 @@ window.requestAnimationFrame(updateLax);
 let projectGliders = document.querySelectorAll(".projectGlider");
 
 for (let i = 0; i < projectGliders.length; i++) {
-  new Glider(projectGliders[i], {
+  let glider = new Glider(projectGliders[i], {
     slidesToShow: 1,
     dots: `#dots${i}`,
     draggable: true,
@@ -27,6 +27,8 @@ for (let i = 0; i < projectGliders.length; i++) {
     },
     rewind: true
   });
+
+  glider.refresh(true);
 }
 
 // ==========================
@@ -40,7 +42,6 @@ let scroll = new SmoothScroll("a[href*='#']", {
 // Scroll functions
 // ==========================
 let prevScrollpos = window.pageYOffset;
-let scrollToTopBtn = document.getElementById("toTopButton");
 
 // Hide or show navbar
 function showNavbar() {
@@ -58,7 +59,9 @@ function showNavbar() {
 }
 
 // Scroll to top button
-function showScrollBtn() {
+function showScrollToTopBtn() {
+  let scrollToTopBtn = document.getElementById("toTopButton");
+
   if (document.body.scrollTop > 300) {
     scrollToTopBtn.style.display = "block";
   } else {
@@ -68,7 +71,7 @@ function showScrollBtn() {
 
 window.onscroll = function() {
   showNavbar();
-  showScrollBtn();
+  showScrollToTopBtn();
 };
 
 // ==========================
@@ -152,20 +155,14 @@ const imgData = {
 // ==========================
 // Modal
 // ==========================
-
-// Get the modal
-let modal = document.getElementById("imgModal");
-// Get modal images
-let modalImages = document.querySelectorAll(".modalImage");
-
-// Close the modal
-document.addEventListener("click", function(e) {
-  if (e.target.matches(".modal__close") || e.target.matches(".modal")) {
-    modal.style.display = "none";
-  }
-});
-
 function openModal(groupName) {
+  // Get the modal
+
+  let modal = document.getElementById("imgModal");
+
+  // Get modal images
+  let modalImages = document.querySelectorAll(".modalImage");
+
   // assign src and alt to modal images
   for (let i = 0; i < modalImages.length; i++) {
     modalImages[i].src = imgData[groupName][i].src;
@@ -176,7 +173,7 @@ function openModal(groupName) {
   modal.style.display = "block";
 
   // initialize glider.js
-  new Glider(document.querySelector(".gliderModal"), {
+  let glider = new Glider(document.querySelector(".gliderModal"), {
     slidesToShow: 1,
     dots: "#dots-modal",
     draggable: true,
@@ -186,4 +183,18 @@ function openModal(groupName) {
     },
     rewind: true
   });
+
+  glider.refresh(true);
 }
+
+// Close the modal
+document.addEventListener("click", function(e) {
+  if (
+    e.target.classList.contains("modal__close") ||
+    e.target.classList.contains("modal")
+  ) {
+    // Get the modal
+    let modal = document.getElementById("imgModal");
+    modal.style.display = "none";
+  }
+});
