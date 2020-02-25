@@ -153,10 +153,8 @@ const imgData = {
 // ==========================
 // Modal
 // ==========================
+let modal = document.getElementById("imgModal");
 function openModal(groupName) {
-  // Get the modal
-  let modal = document.getElementById("imgModal");
-
   // Get modal images
   let modalImages = document.querySelectorAll(".modalImage");
 
@@ -184,15 +182,7 @@ function openModal(groupName) {
   glider.refresh(true);
 }
 
-// Close the modal
-document.addEventListener("click", function(e) {
-  if (
-    e.target.classList.contains("modal__close") ||
-    e.target.classList.contains("modal")
-  ) {
-    // Get the modal
-    let modal = document.getElementById("imgModal");
-    // set modal display to none
-    modal.style.display = "none";
-  }
-});
+document
+  .getElementById("closeModalBtn")
+  .addEventListener("click", () => (modal.style.display = "none"));
+modal.addEventListener("click", () => (modal.style.display = "none"));
