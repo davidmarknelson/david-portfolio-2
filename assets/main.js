@@ -185,4 +185,3 @@ function openModal(groupName) {
 document
   .getElementById("closeModalBtn")
   .addEventListener("click", () => (modal.style.display = "none"));
-modal.addEventListener("click", () => (modal.style.display = "none"));
