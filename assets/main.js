@@ -1,17 +1,5 @@
 "use strict";
 // ==========================
-// laxxx.js
-// ==========================
-lax.setup(); // init
-
-const updateLax = () => {
-  lax.update(window.scrollY);
-  window.requestAnimationFrame(updateLax);
-};
-
-window.requestAnimationFrame(updateLax);
-
-// ==========================
 // smooth scroll
 // ==========================
 const scroll = new SmoothScroll('a[href*="#"]');
