@@ -134,6 +134,23 @@ const imgData = {
     {
       src: "./images/projects/share-family-recipes/sfr-p4-compressed.jpg",
       alt: "Share family recipes unit, end-to-end, and back end tests"
+    }],
+  shareFamilyRecipes2: [
+    {
+      src: "./images/projects/sfrv2/sfrv2-p1.png",
+      alt: "Share family recipes v2 folder structure"
+    },
+    {
+      src: "./images/projects/sfrv2/sfrv2-p2.png",
+      alt: "Share family recipes v2 code duplication"
+    },
+    {
+      src: "./images/projects/sfrv2/sfrv2-p3.png",
+      alt: "Share family recipes v2 interfaces and service generation"
+    },
+    {
+      src: "./images/projects/sfrv2/sfrv2-p4.png",
+      alt: "Share family recipes v2 upload multiple images"
     }
   ]
 };

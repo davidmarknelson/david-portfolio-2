@@ -46,9 +46,49 @@
 
   <!-- Arrow down -->
   <div class="arrow-down">
-    <a href="#projects">
+    <a href="#work">
       <i class="fas fa-chevron-down fa-lg arrow-down--accent"></i>
     </a>
+  </div>
+
+  <!-- ======================================================================= -->
+  <!-- Work -->
+  <!-- ======================================================================= -->
+  <div class="container line-break__container" id="work">
+    <h2 class="line-break">
+      <span class="line-break__text">
+        Work
+      </span>
+    </h2>
+  </div>
+
+  <div class="container">
+    <h3>
+      Alpine Testing Solutions
+    </h3>
+    <p class="gray">
+      Angular Developer 2 / Tech Lead
+    </p>
+    <p class="gray">
+      April 2020 - Present
+    </p>
+    <ul class="gray">
+      <li>
+        Promoted from Developer 1 to Developer 2 in less than a year.
+      </li>
+      <li>
+        Crucial in bringing the 2.0 version of an Enterprise application to market.
+      </li>
+      <li>
+        Leaded the accessibility improvements to bring the website closer to the WCAG 2.0 AA standard.
+      </li>
+      <li>
+        Mentored a new developer while still managing the regular workload.
+      </li>
+      <li>
+        Researched and introduced automated E2E unit testing with Cypress and Jest.
+      </li>
+    </ul>
   </div>
 
   <!-- ======================================================================= -->
@@ -63,6 +103,99 @@
   </div>
 
   <div class="container">
+    <!-- ======================================================================= -->
+    <!-- Share Family Recipes V2 -->
+    <!-- ======================================================================= -->
+    <div class="project__container">
+      <!-- Title -->
+      <div class="project__title__container">
+        <h3 class="project__title">
+          Share Family Recipes V2
+        </h3>
+        <p class="project__subtitle">
+          An updated version of my Share Family Recipes site.
+        </p>
+      </div>
+
+      <div class="grid">
+        <!-- Images -->
+        <div class="project__image">
+          <div class="glider-contain">
+            <div class="glider projectGlider">
+              <figure class="project__image__figure">
+                <img class="project__image__item" src="./images/projects/sfrv2/sfrv2-p1.png"
+                  alt="Share family recipes v2 folder structure" />
+              </figure>
+              <figure class="project__image__figure">
+                <img class="project__image__item" src="./images/projects/sfrv2/sfrv2-p2.png"
+                  alt="Share family recipes v2 code duplication" />
+              </figure>
+              <figure class="project__image__figure">
+                <img class="project__image__item" src="./images/projects/sfrv2/sfrv2-p3.png"
+                  alt="Share family recipes v2 interfaces and service generation" />
+              </figure>
+              <figure class="project__image__figure">
+                <img class="project__image__item" src="./images/projects/sfrv2/sfrv2-p4.png"
+                  alt="Share family recipes v2 upload multiple images" />
+              </figure>
+            </div>
+
+            <div class="project__expand" onclick="openModal('shareFamilyRecipes2')">
+              <i class="fas fa-expand-arrows-alt"></i>
+            </div>
+
+            <button role="button" aria-label="Previous" class="glider-prev glider-prev-0">
+              <i class="fa fa-chevron-left"></i>
+            </button>
+            <button role="button" aria-label="Next" class="glider-next glider-next-0">
+              <i class="fa fa-chevron-right"></i>
+            </button>
+            <div role="tablist" class="dots" id="dots0">
+              <button class="glider-dot" data-index="0" aria-label="Page 1"></button>
+              <button class="glider-dot" data-index="1" aria-label="Page 2"></button>
+              <button class="glider-dot" data-index="2" aria-label="Page 3"></button>
+              <button class="glider-dot" data-index="3" aria-label="Page 4"></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Info -->
+        <div class="project__info">
+          <h4 class="project__info__title">
+            Architecture
+          </h4>
+          <p class="project__info__subtitle">
+            Focused on structuring the files in a way to allow for scalability.
+          </p>
+
+          <h4 class="project__info__title">
+            Automation
+          </h4>
+          <p class="project__info__subtitle">
+            Used tools to generate TypeScript interfaces and GQL services to cut down on manual coding.
+          </p>
+
+          <h4 class="project__info__title">
+            Images
+          </h4>
+          <p class="project__info__subtitle">
+            Added the ability to upload multiple images. Unit and E2E tests also check the functionality of the image
+            components.
+          </p>
+        </div>
+      </div>
+
+      <!-- Project Buttons -->
+      <div class="project__buttons">
+        <a href="https://share-family-recipes.netlify.app" target="_blank" class="button button--secondary">
+          Site
+        </a>
+        <a href="https://github.com/davidmarknelson/sfr-v2" target="_blank" class="button button--secondary">
+          Code
+        </a>
+      </div>
+    </div>
+
     <!-- ======================================================================= -->
     <!-- Share Family Recipes -->
     <!-- ======================================================================= -->
@@ -104,13 +237,13 @@
               <i class="fas fa-expand-arrows-alt"></i>
             </div>
 
-            <button role="button" aria-label="Previous" class="glider-prev glider-prev-0">
+            <button role="button" aria-label="Previous" class="glider-prev glider-prev-1">
               <i class="fa fa-chevron-left"></i>
             </button>
-            <button role="button" aria-label="Next" class="glider-next glider-next-0">
+            <button role="button" aria-label="Next" class="glider-next glider-next-1">
               <i class="fa fa-chevron-right"></i>
             </button>
-            <div role="tablist" class="dots" id="dots0">
+            <div role="tablist" class="dots" id="dots1">
               <button class="glider-dot" data-index="0" aria-label="Page 1"></button>
               <button class="glider-dot" data-index="1" aria-label="Page 2"></button>
               <button class="glider-dot" data-index="2" aria-label="Page 3"></button>
@@ -216,13 +349,13 @@
               <i class="fas fa-expand-arrows-alt"></i>
             </div>
 
-            <button role="button" aria-label="Previous" class="glider-prev glider-prev-1">
+            <button role="button" aria-label="Previous" class="glider-prev glider-prev-2">
               <i class="fa fa-chevron-left"></i>
             </button>
-            <button role="button" aria-label="Next" class="glider-next glider-next-1">
+            <button role="button" aria-label="Next" class="glider-next glider-next-2">
               <i class="fa fa-chevron-right"></i>
             </button>
-            <div role="tablist" class="dots" id="dots1">
+            <div role="tablist" class="dots" id="dots2">
               <button class="glider-dot" data-index="0" aria-label="Page 1"></button>
               <button class="glider-dot" data-index="1" aria-label="Page 2"></button>
               <button class="glider-dot" data-index="2" aria-label="Page 3"></button>
@@ -311,13 +444,13 @@
               <i class="fas fa-expand-arrows-alt"></i>
             </div>
 
-            <button role="button" aria-label="Previous" class="glider-prev glider-prev-2">
+            <button role="button" aria-label="Previous" class="glider-prev glider-prev-3">
               <i class="fa fa-chevron-left"></i>
             </button>
-            <button role="button" aria-label="Next" class="glider-next glider-next-2">
+            <button role="button" aria-label="Next" class="glider-next glider-next-3">
               <i class="fa fa-chevron-right"></i>
             </button>
-            <div role="tablist" class="dots" id="dots2">
+            <div role="tablist" class="dots" id="dots3">
               <button class="glider-dot" data-index="0" aria-label="Page 1"></button>
               <button class="glider-dot" data-index="1" aria-label="Page 2"></button>
               <button class="glider-dot" data-index="2" aria-label="Page 3"></button>
@@ -416,13 +549,13 @@
               <i class="fas fa-expand-arrows-alt"></i>
             </div>
 
-            <button role="button" aria-label="Previous" class="glider-prev glider-prev-3">
+            <button role="button" aria-label="Previous" class="glider-prev glider-prev-4">
               <i class="fa fa-chevron-left"></i>
             </button>
-            <button role="button" aria-label="Next" class="glider-next glider-next-3">
+            <button role="button" aria-label="Next" class="glider-next glider-next-4">
               <i class="fa fa-chevron-right"></i>
             </button>
-            <div role="tablist" class="dots" id="dots3">
+            <div role="tablist" class="dots" id="dots4">
               <button class="glider-dot" data-index="0" aria-label="Page 1"></button>
               <button class="glider-dot" data-index="1" aria-label="Page 2"></button>
               <button class="glider-dot" data-index="2" aria-label="Page 3"></button>
@@ -520,6 +653,9 @@
           <p>
             Bulma
           </p>
+          <p>
+            GraphQL
+          </p>
         </div>
       </div>
 
@@ -532,13 +668,13 @@
             Node.js
           </p>
           <p>
+            NestJS
+          </p>
+          <p>
             Express
           </p>
           <p>
             PostgreSQL
-          </p>
-          <p>
-            Sequelize
           </p>
           <p>
             MongoDB
@@ -549,6 +685,12 @@
           <p>
             SQL Server
           </p>
+          <p>
+            Sequelize
+          </p>
+          <p>
+            TypeORM
+          </p>
         </div>
       </div>
 
@@ -557,6 +699,9 @@
           Testing
         </h3>
         <div class="skills__content">
+          <p>
+            Jest
+          </p>
           <p>
             Jasmine
           </p>
