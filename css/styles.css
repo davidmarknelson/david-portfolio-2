@@ -22,6 +22,15 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.gray {
+  color: var(--color-light-gray);
+}
+
+.floating-shadow {
+  -webkit-box-shadow: 0px 0px 15px 0px var(--color-dark-gray);
+  box-shadow: 0px 0px 15px 0px var(--color-dark-gray);
+}
+
 .navbar {
   z-index: 30;
   position: fixed;
@@ -45,6 +54,7 @@ body {
   width: 5rem;
   text-align: center;
   border: none;
+  outline: none;
 }
 
 .button--primary {
@@ -52,7 +62,7 @@ body {
   color: var(--color-white);
 }
 
-.button--primary:hover, .button--primary:active {
+.button--primary:hover, .button--primary:active, .button--primary:focus {
   background-color: var(--color-primary);
   color: var(--color-black);
 }
@@ -62,7 +72,7 @@ body {
   color: var(--color-black);
 }
 
-.button--secondary:hover, .button--secondary:active {
+.button--secondary:hover, .button--secondary:active, .button--secondary:focus {
   background-color: var(--color-light-primary);
   color: var(--color-black);
 }
@@ -212,9 +222,12 @@ body {
   background-color: var(--color-light-black);
   padding: 0.75rem;
   border-radius: 0.5rem;
+  border: none;
+  color: var(--color-white);
+  outline: none;
 }
 
-.project__expand:hover {
+.project__expand:hover, .project__expand:focus {
   background-color: var(--color-primary);
   color: var(--color-black);
   cursor: pointer;
@@ -344,7 +357,8 @@ body {
   /* Rounded corners */
 }
 
-#toTopButton:hover {
+#toTopButton:hover,
+#toTopButton:focus {
   background-color: var(--color-dark-gray);
   /* Add a dark-grey background on hover */
 }

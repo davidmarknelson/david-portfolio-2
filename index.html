@@ -14,842 +14,848 @@
 </head>
 
 <body>
-  <!-- ======================================================================= -->
-  <!-- Navbar -->
-  <!-- ======================================================================= -->
-  <nav class="navbar">
-    <a data-scroll href="#work" class="button button--primary">
-      Work
-    </a>
-    <a data-scroll href="#projects" class="button button--primary">
-      Projects
-    </a>
-    <a data-scroll href="#skills" class="button button--primary">
-      Skills
-    </a>
-    <a data-scroll href="#contact" class="button button--primary">
-      Contact
-    </a>
-  </nav>
-
-  <!-- ======================================================================= -->
-  <!-- Hero -->
-  <!-- ======================================================================= -->
-  <div class="hero" id="hero">
-    <div class="hero hero__item hero__title-container">
-      <h1 class="hero__title">
-        David Nelson
-      </h1>
-      <p class="hero__subtitle">Software developer</p>
-    </div>
-    <div class="hero hero__item hero__1"></div>
-    <div class="hero hero__item hero__2"></div>
-    <div class="hero hero__item hero__3"></div>
-  </div>
-
-  <!-- Arrow down -->
-  <div class="arrow-down">
-    <a href="#work">
-      <i class="fas fa-chevron-down fa-lg arrow-down--accent"></i>
-    </a>
-  </div>
-
-  <!-- ======================================================================= -->
-  <!-- Work -->
-  <!-- ======================================================================= -->
-  <div class="container line-break__container" id="work">
-    <h2 class="line-break">
-      <span class="line-break__text">
+  <main>
+    <!-- ======================================================================= -->
+    <!-- Navbar -->
+    <!-- ======================================================================= -->
+    <nav class="navbar">
+      <a data-scroll href="#work" class="button button--primary floating-shadow">
         Work
-      </span>
-    </h2>
-  </div>
-
-  <div class="container">
-    <h3>
-      Alpine Testing Solutions
-    </h3>
-    <p class="gray">
-      Angular Developer 2 / Tech Lead
-    </p>
-    <p class="gray">
-      April 2020 - Present
-    </p>
-    <ul class="gray">
-      <li>
-        Promoted from Developer 1 to Developer 2 in less than a year.
-      </li>
-      <li>
-        Crucial in bringing the 2.0 version of an Enterprise application to market.
-      </li>
-      <li>
-        Leaded the accessibility improvements to bring the website closer to the WCAG 2.0 AA standard.
-      </li>
-      <li>
-        Mentored a new developer while still managing the regular workload.
-      </li>
-      <li>
-        Researched and introduced automated E2E unit testing with Cypress and Jest.
-      </li>
-    </ul>
-  </div>
-
-  <!-- ======================================================================= -->
-  <!-- Projects -->
-  <!-- ======================================================================= -->
-  <div class="container line-break__container" id="projects">
-    <h2 class="line-break">
-      <span class="line-break__text">
+      </a>
+      <a data-scroll href="#projects" class="button button--primary floating-shadow">
         Projects
-      </span>
-    </h2>
-  </div>
-
-  <div class="container">
-    <!-- ======================================================================= -->
-    <!-- Share Family Recipes V2 -->
-    <!-- ======================================================================= -->
-    <div class="project__container">
-      <!-- Title -->
-      <div class="project__title__container">
-        <h3 class="project__title">
-          Share Family Recipes V2
-        </h3>
-        <p class="project__subtitle">
-          An updated version of my Share Family Recipes site.
-        </p>
-      </div>
-
-      <div class="grid">
-        <!-- Images -->
-        <div class="project__image">
-          <div class="glider-contain">
-            <div class="glider projectGlider">
-              <figure class="project__image__figure">
-                <img class="project__image__item" src="./images/projects/sfrv2/sfrv2-p1.png"
-                  alt="Share family recipes v2 folder structure" />
-              </figure>
-              <figure class="project__image__figure">
-                <img class="project__image__item" src="./images/projects/sfrv2/sfrv2-p2.png"
-                  alt="Share family recipes v2 code duplication" />
-              </figure>
-              <figure class="project__image__figure">
-                <img class="project__image__item" src="./images/projects/sfrv2/sfrv2-p3.png"
-                  alt="Share family recipes v2 interfaces and service generation" />
-              </figure>
-              <figure class="project__image__figure">
-                <img class="project__image__item" src="./images/projects/sfrv2/sfrv2-p4.png"
-                  alt="Share family recipes v2 upload multiple images" />
-              </figure>
-            </div>
-
-            <div class="project__expand" onclick="openModal('shareFamilyRecipes2')">
-              <i class="fas fa-expand-arrows-alt"></i>
-            </div>
-
-            <button role="button" aria-label="Previous" class="glider-prev glider-prev-0">
-              <i class="fa fa-chevron-left"></i>
-            </button>
-            <button role="button" aria-label="Next" class="glider-next glider-next-0">
-              <i class="fa fa-chevron-right"></i>
-            </button>
-            <div role="tablist" class="dots" id="dots0">
-              <button class="glider-dot" data-index="0" aria-label="Page 1"></button>
-              <button class="glider-dot" data-index="1" aria-label="Page 2"></button>
-              <button class="glider-dot" data-index="2" aria-label="Page 3"></button>
-              <button class="glider-dot" data-index="3" aria-label="Page 4"></button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project Info -->
-        <div class="project__info">
-          <h4 class="project__info__title">
-            Architecture
-          </h4>
-          <p class="project__info__subtitle">
-            Focused on structuring the files in a way to allow for scalability.
-          </p>
-
-          <h4 class="project__info__title">
-            Automation
-          </h4>
-          <p class="project__info__subtitle">
-            Used tools to generate TypeScript interfaces and GQL services to cut down on manual coding.
-          </p>
-
-          <h4 class="project__info__title">
-            Images
-          </h4>
-          <p class="project__info__subtitle">
-            Added the ability to upload multiple images. Unit and E2E tests also check the functionality of the image
-            components.
-          </p>
-        </div>
-      </div>
-
-      <!-- Project Buttons -->
-      <div class="project__buttons">
-        <a href="https://share-family-recipes.netlify.app" target="_blank" class="button button--secondary">
-          Site
-        </a>
-        <a href="https://github.com/davidmarknelson/sfr-v2" target="_blank" class="button button--secondary">
-          Code
-        </a>
-      </div>
-    </div>
-
-    <!-- ======================================================================= -->
-    <!-- Share Family Recipes -->
-    <!-- ======================================================================= -->
-    <div class="project__container">
-      <!-- Title -->
-      <div class="project__title__container">
-        <h3 class="project__title">
-          Share Family Recipes
-        </h3>
-        <p class="project__subtitle">
-          A site to upload, save, and like recipes and recipe pictures.
-        </p>
-      </div>
-
-      <div class="grid">
-        <!-- Images -->
-        <div class="project__image">
-          <div class="glider-contain">
-            <div class="glider projectGlider">
-              <figure class="project__image__figure">
-                <img class="project__image__item" src="./images/projects/share-family-recipes/sfr-p1-compressed.jpg"
-                  alt="Share family recipes landing page with search bar" />
-              </figure>
-              <figure class="project__image__figure">
-                <img class="project__image__item" src="./images/projects/share-family-recipes/sfr-p2-compressed.jpg"
-                  alt="Share family recipes list of recipes" />
-              </figure>
-              <figure class="project__image__figure">
-                <img class="project__image__item" src="./images/projects/share-family-recipes/sfr-p3-compressed.jpg"
-                  alt="Share family recipes figma design" />
-              </figure>
-              <figure class="project__image__figure">
-                <img class="project__image__item" src="./images/projects/share-family-recipes/sfr-p4-compressed.jpg"
-                  alt="Share family recipes unit, end-to-end, and back end tests" />
-              </figure>
-            </div>
-
-            <div class="project__expand" onclick="openModal('shareFamilyRecipes')">
-              <i class="fas fa-expand-arrows-alt"></i>
-            </div>
-
-            <button role="button" aria-label="Previous" class="glider-prev glider-prev-1">
-              <i class="fa fa-chevron-left"></i>
-            </button>
-            <button role="button" aria-label="Next" class="glider-next glider-next-1">
-              <i class="fa fa-chevron-right"></i>
-            </button>
-            <div role="tablist" class="dots" id="dots1">
-              <button class="glider-dot" data-index="0" aria-label="Page 1"></button>
-              <button class="glider-dot" data-index="1" aria-label="Page 2"></button>
-              <button class="glider-dot" data-index="2" aria-label="Page 3"></button>
-              <button class="glider-dot" data-index="3" aria-label="Page 4"></button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project Info -->
-        <div class="project__info">
-          <h4 class="project__info__title">
-            Api
-          </h4>
-          <p class="project__info__subtitle">
-            Built from the ground up using PostgreSQL, Nodemailer, and
-            Cloudinary to provide basic CRUD functionality. It also contains
-            email verification and password reset capabilities.
-          </p>
-
-          <h4 class="project__info__title">
-            Design
-          </h4>
-          <p class="project__info__subtitle">
-            Before creating the front end, a mockup of each page was created
-            in Figma. A single picture was used as inspiration for the color
-            scheme.
-          </p>
-
-          <h4 class="project__info__title">
-            Tests
-          </h4>
-          <p class="project__info__subtitle">
-            There are 131 passing tests for the back end using Mocha and Chai.
-            There are also 412 front end unit tests with Jasmine and 103
-            end-to-end tests in Cypress.
-          </p>
-
-          <h4 class="project__info__title">
-            Documentation
-          </h4>
-          <p class="project__info__subtitle">
-            To improve future maintainability, documentation is live on Github
-            Pages and there are useful comments throughout the code.
-          </p>
-        </div>
-      </div>
-
-      <!-- Project Buttons -->
-      <div class="project__buttons">
-        <a href="https://gifted-borg-c6bee0.netlify.app/" target="_blank" class="button button--secondary">
-          Site
-        </a>
-        <a href="https://github.com/davidmarknelson/share-family-recipes" target="_blank"
-          class="button button--secondary">
-          Code
-        </a>
-        <a href="https://davidmarknelson.github.io/share-family-recipes-api-docs/#share-family-recipes-api"
-          target="_blank" class="button button--secondary">
-          Docs
-        </a>
-      </div>
-    </div>
-
-    <!-- ======================================================================= -->
-    <!-- Portfolio v1 -->
-    <!-- ======================================================================= -->
-    <div class="project__container">
-      <!-- Title -->
-      <div class="project__title__container">
-        <h3 class="project__title">
-          Portfolio Website version 1
-        </h3>
-        <p class="project__subtitle">
-          This portfolio was made with Bulma to show off projects while
-          practicing testing with Jasmine, and Cypress.
-        </p>
-      </div>
-
-      <div class="grid">
-        <!-- Images -->
-        <div class="project__image">
-          <div class="glider-contain">
-            <div class="glider projectGlider">
-              <figure class="project__image__figure">
-                <img class="project__image__item" src="./images/projects/portfolio-v1/portfolio-p1-compressed.jpg"
-                  alt="Portfolio v1 landing page" />
-              </figure>
-              <figure class="project__image__figure">
-                <img class="project__image__item" src="./images/projects/portfolio-v1/portfolio-p2-compressed.jpg"
-                  alt="Portfolio v1 contact form" />
-              </figure>
-              <figure class="project__image__figure">
-                <img class="project__image__item" src="./images/projects/portfolio-v1/portfolio-p3-compressed.jpg"
-                  alt="Portfolio v1 unit tests" />
-              </figure>
-              <figure class="project__image__figure">
-                <img class="project__image__item" src="./images/projects/portfolio-v1/portfolio-p4-compressed.jpg"
-                  alt="Portfolio v1 cypress tests" />
-              </figure>
-            </div>
-
-            <div class="project__expand" onclick="openModal('portfolioV1')">
-              <i class="fas fa-expand-arrows-alt"></i>
-            </div>
-
-            <button role="button" aria-label="Previous" class="glider-prev glider-prev-2">
-              <i class="fa fa-chevron-left"></i>
-            </button>
-            <button role="button" aria-label="Next" class="glider-next glider-next-2">
-              <i class="fa fa-chevron-right"></i>
-            </button>
-            <div role="tablist" class="dots" id="dots2">
-              <button class="glider-dot" data-index="0" aria-label="Page 1"></button>
-              <button class="glider-dot" data-index="1" aria-label="Page 2"></button>
-              <button class="glider-dot" data-index="2" aria-label="Page 3"></button>
-              <button class="glider-dot" data-index="3" aria-label="Page 4"></button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project Info -->
-        <div class="project__info">
-          <h4 class="project__info__title">
-            Testing
-          </h4>
-          <p class="project__info__subtitle">
-            This site has passing unit and E2E tests using Jasmine and
-            Cypress.
-          </p>
-
-          <h4 class="project__info__title">
-            Back end
-          </h4>
-          <p class="project__info__subtitle">
-            Nodemailer, Express, and Sendgrid are used for the back end to
-            send the message from the contact form.
-          </p>
-
-          <h4 class="project__info__title">
-            Color
-          </h4>
-          <p class="project__info__subtitle">
-            The colors throughout the page pass WCAG contrast tests.
-          </p>
-        </div>
-      </div>
-
-      <!-- Project Buttons -->
-      <div class="project__buttons">
-        <a href="https://davidnelsoncodes.herokuapp.com/" target="_blank" class="button button--secondary">
-          Site
-        </a>
-        <a href="https://github.com/davidmarknelson/david-portfolio" target="_blank" class="button button--secondary">
-          Code
-        </a>
-      </div>
-    </div>
-
-    <!-- ======================================================================= -->
-    <!-- Air KOALAty Report -->
-    <!-- ======================================================================= -->
-    <div class="project__container">
-      <!-- Title -->
-      <div class="project__title__container">
-        <h3 class="project__title">
-          Air KOALAty Report
-        </h3>
-        <p class="project__subtitle">
-          A place to find the air quality and weather of cities made with
-          Angular 7, Express, MongoDB, and Auth0.
-        </p>
-      </div>
-
-      <div class="grid">
-        <!-- Images -->
-        <div class="project__image">
-          <div class="glider-contain">
-            <div class="glider projectGlider">
-              <figure class="project__image__figure">
-                <img class="project__image__item" src="./images/projects/air-koalaty-report/air-p1-compressed.jpg"
-                  alt="Air KOALAty Report landing page" />
-              </figure>
-              <figure class="project__image__figure">
-                <img class="project__image__item" src="./images/projects/air-koalaty-report/air-p2-compressed.jpg"
-                  alt="Air KOALAty Report google autocomplete places" />
-              </figure>
-              <figure class="project__image__figure">
-                <img class="project__image__item" src="./images/projects/air-koalaty-report/air-p3-compressed.jpg"
-                  alt="Air KOALAty Report login with AuthO" />
-              </figure>
-              <figure class="project__image__figure">
-                <img class="project__image__item" src="./images/projects/air-koalaty-report/air-p4-compressed.jpg"
-                  alt="Air KOALAty Report list page" />
-              </figure>
-            </div>
-
-            <div class="project__expand" onclick="openModal('airKoalaty')">
-              <i class="fas fa-expand-arrows-alt"></i>
-            </div>
-
-            <button role="button" aria-label="Previous" class="glider-prev glider-prev-3">
-              <i class="fa fa-chevron-left"></i>
-            </button>
-            <button role="button" aria-label="Next" class="glider-next glider-next-3">
-              <i class="fa fa-chevron-right"></i>
-            </button>
-            <div role="tablist" class="dots" id="dots3">
-              <button class="glider-dot" data-index="0" aria-label="Page 1"></button>
-              <button class="glider-dot" data-index="1" aria-label="Page 2"></button>
-              <button class="glider-dot" data-index="2" aria-label="Page 3"></button>
-              <button class="glider-dot" data-index="3" aria-label="Page 4"></button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project Info -->
-        <div class="project__info">
-          <h4 class="project__info__title">
-            Authorization
-          </h4>
-          <p class="project__info__subtitle">
-            Auth0 is used for authorization to let users save their favorite
-            cities to their list.
-          </p>
-
-          <h4 class="project__info__title">
-            Angular Material
-          </h4>
-          <p class="project__info__subtitle">
-            The card, button, theme, and navbar components are Angular
-            Material.
-          </p>
-
-          <h4 class="project__info__title">
-            Api
-          </h4>
-          <p class="project__info__subtitle">
-            The api is from Air Visual and it provides the weather and air
-            quality index for different cities.
-          </p>
-
-          <h4 class="project__info__title">
-            Back end
-          </h4>
-          <p class="project__info__subtitle">
-            The back end uses Express, Mongoose, and MongoDB to send requests
-            to the API and to update the user's list.
-          </p>
-        </div>
-      </div>
-
-      <!-- Project Buttons -->
-      <div class="project__buttons">
-        <a href="https://airkoalatyreport.herokuapp.com/" target="_blank" class="button button--secondary">
-          Site
-        </a>
-        <a href="https://github.com/davidmarknelson/air-koalaty-report" target="_blank"
-          class="button button--secondary">
-          Code
-        </a>
-      </div>
-    </div>
-
-    <!-- ======================================================================= -->
-    <!-- Poke-Survey -->
-    <!-- ======================================================================= -->
-    <div class="project__container">
-      <!-- Title -->
-      <div class="project__title__container">
-        <h3 class="project__title">
-          Pok&eacute;-Survey
-        </h3>
-        <p class="project__subtitle">
-          A website to vote for your favorite Pokémon made with Express,
-          MongoDB, and Mongoose.
-        </p>
-      </div>
-
-      <div class="grid">
-        <!-- Images -->
-        <div class="project__image">
-          <div class="glider-contain">
-            <div class="glider projectGlider">
-              <figure class="project__image__figure">
-                <img class="project__image__item" src="./images/projects/poke-survey/poke-survey-p1-compressed.jpg"
-                  alt="Poke-Survey landing page" />
-              </figure>
-              <figure class="project__image__figure">
-                <img class="project__image__item" src="./images/projects/poke-survey/poke-survey-p2-compressed.jpg"
-                  alt="Poke-Survey vote page" />
-              </figure>
-              <figure class="project__image__figure">
-                <img class="project__image__item" src="./images/projects/poke-survey/poke-survey-p3-compressed.jpg"
-                  alt="Poke-Survey results page" />
-              </figure>
-              <figure class="project__image__figure">
-                <img class="project__image__item" src="./images/projects/poke-survey/poke-survey-p4-compressed.jpg"
-                  alt="Poke-Survey contact page" />
-              </figure>
-            </div>
-
-            <div class="project__expand" onclick="openModal('pokeSurvey')">
-              <i class="fas fa-expand-arrows-alt"></i>
-            </div>
-
-            <button role="button" aria-label="Previous" class="glider-prev glider-prev-4">
-              <i class="fa fa-chevron-left"></i>
-            </button>
-            <button role="button" aria-label="Next" class="glider-next glider-next-4">
-              <i class="fa fa-chevron-right"></i>
-            </button>
-            <div role="tablist" class="dots" id="dots4">
-              <button class="glider-dot" data-index="0" aria-label="Page 1"></button>
-              <button class="glider-dot" data-index="1" aria-label="Page 2"></button>
-              <button class="glider-dot" data-index="2" aria-label="Page 3"></button>
-              <button class="glider-dot" data-index="3" aria-label="Page 4"></button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project Info -->
-        <div class="project__info">
-          <h4 class="project__info__title">
-            Voting
-          </h4>
-          <p class="project__info__subtitle">
-            Mongoose stores the votes in the MongoDB database.
-          </p>
-
-          <h4 class="project__info__title">
-            Updating Votes
-          </h4>
-          <p class="project__info__subtitle">
-            The back end creates a string unique to each user's browser to
-            show the user's previous votes and to let them update their votes.
-          </p>
-
-          <h4 class="project__info__title">
-            View
-          </h4>
-          <p class="project__info__subtitle">
-            The template to render the view is EJS and it loops through the
-            Pokémon data to show the images and voting results.
-          </p>
-
-          <h4 class="project__info__title">
-            Styling
-          </h4>
-          <p class="project__info__subtitle">
-            Bootstrap is used to style the website and display the results
-            with small bar charts.
-          </p>
-        </div>
-      </div>
-
-      <!-- Project Buttons -->
-      <div class="project__buttons">
-        <a href="https://poke-survey.herokuapp.com/" target="_blank" class="button button--secondary">
-          Site
-        </a>
-        <a href="https://github.com/davidmarknelson/poke-survey" target="_blank" class="button button--secondary">
-          Code
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- ======================================================================= -->
-  <!-- Skills -->
-  <!-- ======================================================================= -->
-  <div class="container line-break__container" id="skills">
-    <h2 class="line-break">
-      <span class="line-break__text">
+      </a>
+      <a data-scroll href="#skills" class="button button--primary floating-shadow">
         Skills
-      </span>
-    </h2>
-  </div>
-
-  <div class="container">
-    <div class="skills__container">
-      <div class="skills__item">
-        <h3>
-          Front End
-        </h3>
-        <div class="skills__content">
-          <p>
-            HTML5
-          </p>
-          <p>
-            CSS3
-          </p>
-          <p>
-            Javascript / ES6
-          </p>
-          <p>
-            Typescript
-          </p>
-          <p>
-            Angular
-          </p>
-          <p>
-            Angular Material
-          </p>
-          <p>
-            Bootstrap
-          </p>
-          <p>
-            Bulma
-          </p>
-          <p>
-            GraphQL
-          </p>
-        </div>
-      </div>
-
-      <div class="skills__item">
-        <h3>
-          Back End
-        </h3>
-        <div class="skills__content">
-          <p>
-            Node.js
-          </p>
-          <p>
-            NestJS
-          </p>
-          <p>
-            Express
-          </p>
-          <p>
-            PostgreSQL
-          </p>
-          <p>
-            MongoDB
-          </p>
-          <p>
-            Mongoose
-          </p>
-          <p>
-            SQL Server
-          </p>
-          <p>
-            Sequelize
-          </p>
-          <p>
-            TypeORM
-          </p>
-        </div>
-      </div>
-
-      <div class="skills__item">
-        <h3>
-          Testing
-        </h3>
-        <div class="skills__content">
-          <p>
-            Jest
-          </p>
-          <p>
-            Jasmine
-          </p>
-          <p>
-            Cypress
-          </p>
-          <p>
-            Karma
-          </p>
-          <p>
-            Mocha
-          </p>
-          <p>
-            Chai
-          </p>
-        </div>
-      </div>
-
-      <div class="skills__item">
-        <h3>
-          Source Control
-        </h3>
-        <div class="skills__content">
-          <p>
-            Git
-          </p>
-          <p>
-            Github
-          </p>
-        </div>
-      </div>
-
-      <div class="skills__item">
-        <h3>
-          Deployment
-        </h3>
-        <div class="skills__content">
-          <p>
-            Heroku
-          </p>
-          <p>
-            Netlify
-          </p>
-          <p>
-            MongoDB Atlas
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ======================================================================= -->
-  <!-- Contact -->
-  <!-- ======================================================================= -->
-  <div class="container line-break__container" id="contact">
-    <h2 class="line-break">
-      <span class="line-break__text">
+      </a>
+      <a data-scroll href="#contact" class="button button--primary floating-shadow">
         Contact
-      </span>
-    </h2>
-  </div>
+      </a>
+    </nav>
 
-  <div class="container">
-    <p class="contact">
-      I am available for work. Please contact me at
-      <a class="link" href="mailto:davidmarknelson@protonmail.com" target="_blank">
-        davidmarknelson@protonmail.com</a>.
-    </p>
+    <!-- ======================================================================= -->
+    <!-- Hero -->
+    <!-- ======================================================================= -->
+    <div class="hero" id="hero">
+      <div class="hero hero__item hero__title-container">
+        <h1 class="hero__title">
+          David Nelson
+        </h1>
+        <p class="hero__subtitle">Software developer</p>
+      </div>
+      <div class="hero hero__item hero__1"></div>
+      <div class="hero hero__item hero__2"></div>
+      <div class="hero hero__item hero__3"></div>
+    </div>
 
-    <p class="contact">or</p>
-    <div class="contact__icon-container">
-      <a class="link contact__icons" href="https://github.com/davidmarknelson" target="_blank">
-        <i class="fab fa-github fa-3x"></i>
+    <!-- Arrow down -->
+    <div class="arrow-down">
+      <a href="#work" aria-label="Scroll down to the work section">
+        <i class="fas fa-chevron-down fa-lg arrow-down--accent"></i>
       </a>
     </div>
-  </div>
 
-  <!-- ======================================================================= -->
-  <!-- Footer -->
-  <!-- ======================================================================= -->
-  <footer class="footer">
-    <div class="container footer__content-container">
-      <p>
-        You can view the source code for this website
-        <a class="link" href="https://github.com/davidmarknelson/david-portfolio-2" target="_blank">here</a>
-        .
-      </p>
+    <!-- ======================================================================= -->
+    <!-- Work -->
+    <!-- ======================================================================= -->
+    <div class="container line-break__container" id="work">
+      <h2 class="line-break">
+        <span class="line-break__text">
+          Work
+        </span>
+      </h2>
     </div>
-  </footer>
 
-  <!-- ======================================================================= -->
-  <!-- Scroll to top button -->
-  <!-- ======================================================================= -->
-  <a data-scroll href="#hero" id="toTopButton" title="Go to top">
-    <i class="fas fa-chevron-up"></i>
-  </a>
+    <div class="container">
+      <h3>
+        Alpine Testing Solutions
+      </h3>
+      <p class="gray">
+        Angular Developer 2 / Tech Lead
+      </p>
+      <p class="gray">
+        April 2020 - Present
+      </p>
+      <ul class="gray">
+        <li>
+          Promoted from Developer 1 to Developer 2 in less than a year.
+        </li>
+        <li>
+          Crucial in bringing the 2.0 version of an Enterprise application to market.
+        </li>
+        <li>
+          Leaded the accessibility improvements to bring the website closer to the WCAG 2.0 AA standard.
+        </li>
+        <li>
+          Mentored a new developer while still managing the regular workload.
+        </li>
+        <li>
+          Researched and introduced automated E2E unit testing with Cypress and Jest.
+        </li>
+      </ul>
+    </div>
 
-  <!-- ======================================================================= -->
-  <!-- Image Modal -->
-  <!-- ======================================================================= -->
-  <div id="imgModal" class="modal modal__animate">
-    <!-- The Close Button -->
-    <i class="fas fa-times modal__close" id="closeModalBtn"></i>
+    <!-- ======================================================================= -->
+    <!-- Projects -->
+    <!-- ======================================================================= -->
+    <div class="container line-break__container" id="projects">
+      <h2 class="line-break">
+        <span class="line-break__text">
+          Projects
+        </span>
+      </h2>
+    </div>
 
-    <!-- Modal image container -->
-    <div class="modal__container modal__animate">
-      <div class="glider-contain modal__animate">
-        <div class="glider gliderModal">
-          <figure class="project__image__figure">
-            <img class="project__image__item modalImage"
-              src="./images/projects/share-family-recipes/sfr-p1-compressed.jpg"
-              alt="Share family recipes landing page with search bar" />
-          </figure>
-          <figure class="project__image__figure">
-            <img class="project__image__item modalImage"
-              src="./images/projects/share-family-recipes/sfr-p2-compressed.jpg"
-              alt="Share family recipes list of recipes" />
-          </figure>
-          <figure class="project__image__figure">
-            <img class="project__image__item modalImage"
-              src="./images/projects/share-family-recipes/sfr-p3-compressed.jpg"
-              alt="Share family recipes figma design" />
-          </figure>
-          <figure class="project__image__figure">
-            <img class="project__image__item modalImage"
-              src="./images/projects/share-family-recipes/sfr-p4-compressed.jpg"
-              alt="Share family recipes unit, end-to-end, and back end tests" />
-          </figure>
+    <div class="container">
+      <!-- ======================================================================= -->
+      <!-- Share Family Recipes V2 -->
+      <!-- ======================================================================= -->
+      <div class="project__container">
+        <!-- Title -->
+        <div class="project__title__container">
+          <h3 class="project__title">
+            Share Family Recipes V2
+          </h3>
+          <p class="project__subtitle">
+            An updated version of my Share Family Recipes site.
+          </p>
         </div>
 
-        <button role="button" aria-label="Previous" class="glider-prev glider-prev-modal">
-          <i class="fa fa-chevron-left"></i>
-        </button>
-        <button role="button" aria-label="Next" class="glider-next glider-next-modal">
-          <i class="fa fa-chevron-right"></i>
-        </button>
-        <div role="tablist" class="dots" id="dots-modal">
-          <button class="glider-dot" data-index="0" aria-label="Page 1"></button>
-          <button class="glider-dot" data-index="1" aria-label="Page 2"></button>
-          <button class="glider-dot" data-index="2" aria-label="Page 3"></button>
-          <button class="glider-dot" data-index="3" aria-label="Page 4"></button>
+        <div class="grid">
+          <!-- Images -->
+          <div class="project__image">
+            <div class="glider-contain">
+              <div class="glider projectGlider">
+                <figure class="project__image__figure">
+                  <img class="project__image__item" src="./images/projects/sfrv2/sfrv2-p1.png"
+                    alt="Share family recipes v2 folder structure" />
+                </figure>
+                <figure class="project__image__figure">
+                  <img class="project__image__item" src="./images/projects/sfrv2/sfrv2-p2.png"
+                    alt="Share family recipes v2 code duplication" />
+                </figure>
+                <figure class="project__image__figure">
+                  <img class="project__image__item" src="./images/projects/sfrv2/sfrv2-p3.png"
+                    alt="Share family recipes v2 interfaces and service generation" />
+                </figure>
+                <figure class="project__image__figure">
+                  <img class="project__image__item" src="./images/projects/sfrv2/sfrv2-p4.png"
+                    alt="Share family recipes v2 upload multiple images" />
+                </figure>
+              </div>
+
+              <button aria-label="Open images in full screen" class="project__expand"
+                onclick="openModal('shareFamilyRecipes2')">
+                <i class="fas fa-expand-arrows-alt"></i>
+              </button>
+
+              <button role="button" aria-label="Previous" class="glider-prev glider-prev-0">
+                <i class="fa fa-chevron-left"></i>
+              </button>
+              <button role="button" aria-label="Next" class="glider-next glider-next-0">
+                <i class="fa fa-chevron-right"></i>
+              </button>
+              <div role="tablist" class="dots" id="dots0">
+                <button class="glider-dot" data-index="0" aria-label="Page 1"></button>
+                <button class="glider-dot" data-index="1" aria-label="Page 2"></button>
+                <button class="glider-dot" data-index="2" aria-label="Page 3"></button>
+                <button class="glider-dot" data-index="3" aria-label="Page 4"></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Info -->
+          <div class="project__info">
+            <h4 class="project__info__title">
+              Architecture
+            </h4>
+            <p class="project__info__subtitle">
+              Focused on structuring the files in a way to allow for scalability.
+            </p>
+
+            <h4 class="project__info__title">
+              Automation
+            </h4>
+            <p class="project__info__subtitle">
+              Used tools to generate TypeScript interfaces and GQL services to cut down on manual coding.
+            </p>
+
+            <h4 class="project__info__title">
+              Images
+            </h4>
+            <p class="project__info__subtitle">
+              Added the ability to upload multiple images. Unit and E2E tests also check the functionality of the image
+              components.
+            </p>
+          </div>
+        </div>
+
+        <!-- Project Buttons -->
+        <div class="project__buttons">
+          <a href="https://share-family-recipes.netlify.app" target="_blank" class="button button--secondary">
+            Site
+          </a>
+          <a href="https://github.com/davidmarknelson/sfr-v2" target="_blank" class="button button--secondary">
+            Code
+          </a>
+        </div>
+      </div>
+
+      <!-- ======================================================================= -->
+      <!-- Share Family Recipes -->
+      <!-- ======================================================================= -->
+      <div class="project__container">
+        <!-- Title -->
+        <div class="project__title__container">
+          <h3 class="project__title">
+            Share Family Recipes
+          </h3>
+          <p class="project__subtitle">
+            A site to upload, save, and like recipes and recipe pictures.
+          </p>
+        </div>
+
+        <div class="grid">
+          <!-- Images -->
+          <div class="project__image">
+            <div class="glider-contain">
+              <div class="glider projectGlider">
+                <figure class="project__image__figure">
+                  <img class="project__image__item" src="./images/projects/share-family-recipes/sfr-p1-compressed.jpg"
+                    alt="Share family recipes landing page with search bar" />
+                </figure>
+                <figure class="project__image__figure">
+                  <img class="project__image__item" src="./images/projects/share-family-recipes/sfr-p2-compressed.jpg"
+                    alt="Share family recipes list of recipes" />
+                </figure>
+                <figure class="project__image__figure">
+                  <img class="project__image__item" src="./images/projects/share-family-recipes/sfr-p3-compressed.jpg"
+                    alt="Share family recipes figma design" />
+                </figure>
+                <figure class="project__image__figure">
+                  <img class="project__image__item" src="./images/projects/share-family-recipes/sfr-p4-compressed.jpg"
+                    alt="Share family recipes unit, end-to-end, and back end tests" />
+                </figure>
+              </div>
+
+              <button aria-label="Open images in full screen" class="project__expand"
+                onclick="openModal('shareFamilyRecipes')">
+                <i class="fas fa-expand-arrows-alt"></i>
+              </button>
+
+              <button role="button" aria-label="Previous" class="glider-prev glider-prev-1">
+                <i class="fa fa-chevron-left"></i>
+              </button>
+              <button role="button" aria-label="Next" class="glider-next glider-next-1">
+                <i class="fa fa-chevron-right"></i>
+              </button>
+              <div role="tablist" class="dots" id="dots1">
+                <button class="glider-dot" data-index="0" aria-label="Page 1"></button>
+                <button class="glider-dot" data-index="1" aria-label="Page 2"></button>
+                <button class="glider-dot" data-index="2" aria-label="Page 3"></button>
+                <button class="glider-dot" data-index="3" aria-label="Page 4"></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Info -->
+          <div class="project__info">
+            <h4 class="project__info__title">
+              Api
+            </h4>
+            <p class="project__info__subtitle">
+              Built from the ground up using PostgreSQL, Nodemailer, and
+              Cloudinary to provide basic CRUD functionality. It also contains
+              email verification and password reset capabilities.
+            </p>
+
+            <h4 class="project__info__title">
+              Design
+            </h4>
+            <p class="project__info__subtitle">
+              Before creating the front end, a mockup of each page was created
+              in Figma. A single picture was used as inspiration for the color
+              scheme.
+            </p>
+
+            <h4 class="project__info__title">
+              Tests
+            </h4>
+            <p class="project__info__subtitle">
+              There are 131 passing tests for the back end using Mocha and Chai.
+              There are also 412 front end unit tests with Jasmine and 103
+              end-to-end tests in Cypress.
+            </p>
+
+            <h4 class="project__info__title">
+              Documentation
+            </h4>
+            <p class="project__info__subtitle">
+              To improve future maintainability, documentation is live on Github
+              Pages and there are useful comments throughout the code.
+            </p>
+          </div>
+        </div>
+
+        <!-- Project Buttons -->
+        <div class="project__buttons">
+          <a href="https://gifted-borg-c6bee0.netlify.app/" target="_blank" class="button button--secondary">
+            Site
+          </a>
+          <a href="https://github.com/davidmarknelson/share-family-recipes" target="_blank"
+            class="button button--secondary">
+            Code
+          </a>
+          <a href="https://davidmarknelson.github.io/share-family-recipes-api-docs/#share-family-recipes-api"
+            target="_blank" class="button button--secondary">
+            Docs
+          </a>
+        </div>
+      </div>
+
+      <!-- ======================================================================= -->
+      <!-- Portfolio v1 -->
+      <!-- ======================================================================= -->
+      <div class="project__container">
+        <!-- Title -->
+        <div class="project__title__container">
+          <h3 class="project__title">
+            Portfolio Website version 1
+          </h3>
+          <p class="project__subtitle">
+            This portfolio was made with Bulma to show off projects while
+            practicing testing with Jasmine, and Cypress.
+          </p>
+        </div>
+
+        <div class="grid">
+          <!-- Images -->
+          <div class="project__image">
+            <div class="glider-contain">
+              <div class="glider projectGlider">
+                <figure class="project__image__figure">
+                  <img class="project__image__item" src="./images/projects/portfolio-v1/portfolio-p1-compressed.jpg"
+                    alt="Portfolio v1 landing page" />
+                </figure>
+                <figure class="project__image__figure">
+                  <img class="project__image__item" src="./images/projects/portfolio-v1/portfolio-p2-compressed.jpg"
+                    alt="Portfolio v1 contact form" />
+                </figure>
+                <figure class="project__image__figure">
+                  <img class="project__image__item" src="./images/projects/portfolio-v1/portfolio-p3-compressed.jpg"
+                    alt="Portfolio v1 unit tests" />
+                </figure>
+                <figure class="project__image__figure">
+                  <img class="project__image__item" src="./images/projects/portfolio-v1/portfolio-p4-compressed.jpg"
+                    alt="Portfolio v1 cypress tests" />
+                </figure>
+              </div>
+
+              <button aria-label="Open images in full screen" class="project__expand"
+                onclick="openModal('portfolioV1')">
+                <i class="fas fa-expand-arrows-alt"></i>
+              </button>
+
+              <button role="button" aria-label="Previous" class="glider-prev glider-prev-2">
+                <i class="fa fa-chevron-left"></i>
+              </button>
+              <button role="button" aria-label="Next" class="glider-next glider-next-2">
+                <i class="fa fa-chevron-right"></i>
+              </button>
+              <div role="tablist" class="dots" id="dots2">
+                <button class="glider-dot" data-index="0" aria-label="Page 1"></button>
+                <button class="glider-dot" data-index="1" aria-label="Page 2"></button>
+                <button class="glider-dot" data-index="2" aria-label="Page 3"></button>
+                <button class="glider-dot" data-index="3" aria-label="Page 4"></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Info -->
+          <div class="project__info">
+            <h4 class="project__info__title">
+              Testing
+            </h4>
+            <p class="project__info__subtitle">
+              This site has passing unit and E2E tests using Jasmine and
+              Cypress.
+            </p>
+
+            <h4 class="project__info__title">
+              Back end
+            </h4>
+            <p class="project__info__subtitle">
+              Nodemailer, Express, and Sendgrid are used for the back end to
+              send the message from the contact form.
+            </p>
+
+            <h4 class="project__info__title">
+              Color
+            </h4>
+            <p class="project__info__subtitle">
+              The colors throughout the page pass WCAG contrast tests.
+            </p>
+          </div>
+        </div>
+
+        <!-- Project Buttons -->
+        <div class="project__buttons">
+          <a href="https://davidnelsoncodes.herokuapp.com/" target="_blank" class="button button--secondary">
+            Site
+          </a>
+          <a href="https://github.com/davidmarknelson/david-portfolio" target="_blank" class="button button--secondary">
+            Code
+          </a>
+        </div>
+      </div>
+
+      <!-- ======================================================================= -->
+      <!-- Air KOALAty Report -->
+      <!-- ======================================================================= -->
+      <div class="project__container">
+        <!-- Title -->
+        <div class="project__title__container">
+          <h3 class="project__title">
+            Air KOALAty Report
+          </h3>
+          <p class="project__subtitle">
+            A place to find the air quality and weather of cities made with
+            Angular 7, Express, MongoDB, and Auth0.
+          </p>
+        </div>
+
+        <div class="grid">
+          <!-- Images -->
+          <div class="project__image">
+            <div class="glider-contain">
+              <div class="glider projectGlider">
+                <figure class="project__image__figure">
+                  <img class="project__image__item" src="./images/projects/air-koalaty-report/air-p1-compressed.jpg"
+                    alt="Air KOALAty Report landing page" />
+                </figure>
+                <figure class="project__image__figure">
+                  <img class="project__image__item" src="./images/projects/air-koalaty-report/air-p2-compressed.jpg"
+                    alt="Air KOALAty Report google autocomplete places" />
+                </figure>
+                <figure class="project__image__figure">
+                  <img class="project__image__item" src="./images/projects/air-koalaty-report/air-p3-compressed.jpg"
+                    alt="Air KOALAty Report login with AuthO" />
+                </figure>
+                <figure class="project__image__figure">
+                  <img class="project__image__item" src="./images/projects/air-koalaty-report/air-p4-compressed.jpg"
+                    alt="Air KOALAty Report list page" />
+                </figure>
+              </div>
+
+              <button aria-label="Open images in full screen" class="project__expand" onclick="openModal('airKoalaty')">
+                <i class="fas fa-expand-arrows-alt"></i>
+              </button>
+
+              <button role="button" aria-label="Previous" class="glider-prev glider-prev-3">
+                <i class="fa fa-chevron-left"></i>
+              </button>
+              <button role="button" aria-label="Next" class="glider-next glider-next-3">
+                <i class="fa fa-chevron-right"></i>
+              </button>
+              <div role="tablist" class="dots" id="dots3">
+                <button class="glider-dot" data-index="0" aria-label="Page 1"></button>
+                <button class="glider-dot" data-index="1" aria-label="Page 2"></button>
+                <button class="glider-dot" data-index="2" aria-label="Page 3"></button>
+                <button class="glider-dot" data-index="3" aria-label="Page 4"></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Info -->
+          <div class="project__info">
+            <h4 class="project__info__title">
+              Authorization
+            </h4>
+            <p class="project__info__subtitle">
+              Auth0 is used for authorization to let users save their favorite
+              cities to their list.
+            </p>
+
+            <h4 class="project__info__title">
+              Angular Material
+            </h4>
+            <p class="project__info__subtitle">
+              The card, button, theme, and navbar components are Angular
+              Material.
+            </p>
+
+            <h4 class="project__info__title">
+              Api
+            </h4>
+            <p class="project__info__subtitle">
+              The api is from Air Visual and it provides the weather and air
+              quality index for different cities.
+            </p>
+
+            <h4 class="project__info__title">
+              Back end
+            </h4>
+            <p class="project__info__subtitle">
+              The back end uses Express, Mongoose, and MongoDB to send requests
+              to the API and to update the user's list.
+            </p>
+          </div>
+        </div>
+
+        <!-- Project Buttons -->
+        <div class="project__buttons">
+          <a href="https://airkoalatyreport.herokuapp.com/" target="_blank" class="button button--secondary">
+            Site
+          </a>
+          <a href="https://github.com/davidmarknelson/air-koalaty-report" target="_blank"
+            class="button button--secondary">
+            Code
+          </a>
+        </div>
+      </div>
+
+      <!-- ======================================================================= -->
+      <!-- Poke-Survey -->
+      <!-- ======================================================================= -->
+      <div class="project__container">
+        <!-- Title -->
+        <div class="project__title__container">
+          <h3 class="project__title">
+            Pok&eacute;-Survey
+          </h3>
+          <p class="project__subtitle">
+            A website to vote for your favorite Pokémon made with Express,
+            MongoDB, and Mongoose.
+          </p>
+        </div>
+
+        <div class="grid">
+          <!-- Images -->
+          <div class="project__image">
+            <div class="glider-contain">
+              <div class="glider projectGlider">
+                <figure class="project__image__figure">
+                  <img class="project__image__item" src="./images/projects/poke-survey/poke-survey-p1-compressed.jpg"
+                    alt="Poke-Survey landing page" />
+                </figure>
+                <figure class="project__image__figure">
+                  <img class="project__image__item" src="./images/projects/poke-survey/poke-survey-p2-compressed.jpg"
+                    alt="Poke-Survey vote page" />
+                </figure>
+                <figure class="project__image__figure">
+                  <img class="project__image__item" src="./images/projects/poke-survey/poke-survey-p3-compressed.jpg"
+                    alt="Poke-Survey results page" />
+                </figure>
+                <figure class="project__image__figure">
+                  <img class="project__image__item" src="./images/projects/poke-survey/poke-survey-p4-compressed.jpg"
+                    alt="Poke-Survey contact page" />
+                </figure>
+              </div>
+
+              <button aria-label="Open images in full screen" class="project__expand" onclick="openModal('pokeSurvey')">
+                <i class="fas fa-expand-arrows-alt"></i>
+              </button>
+
+              <button role="button" aria-label="Previous" class="glider-prev glider-prev-4">
+                <i class="fa fa-chevron-left"></i>
+              </button>
+              <button role="button" aria-label="Next" class="glider-next glider-next-4">
+                <i class="fa fa-chevron-right"></i>
+              </button>
+              <div role="tablist" class="dots" id="dots4">
+                <button class="glider-dot" data-index="0" aria-label="Page 1"></button>
+                <button class="glider-dot" data-index="1" aria-label="Page 2"></button>
+                <button class="glider-dot" data-index="2" aria-label="Page 3"></button>
+                <button class="glider-dot" data-index="3" aria-label="Page 4"></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Info -->
+          <div class="project__info">
+            <h4 class="project__info__title">
+              Voting
+            </h4>
+            <p class="project__info__subtitle">
+              Mongoose stores the votes in the MongoDB database.
+            </p>
+
+            <h4 class="project__info__title">
+              Updating Votes
+            </h4>
+            <p class="project__info__subtitle">
+              The back end creates a string unique to each user's browser to
+              show the user's previous votes and to let them update their votes.
+            </p>
+
+            <h4 class="project__info__title">
+              View
+            </h4>
+            <p class="project__info__subtitle">
+              The template to render the view is EJS and it loops through the
+              Pokémon data to show the images and voting results.
+            </p>
+
+            <h4 class="project__info__title">
+              Styling
+            </h4>
+            <p class="project__info__subtitle">
+              Bootstrap is used to style the website and display the results
+              with small bar charts.
+            </p>
+          </div>
+        </div>
+
+        <!-- Project Buttons -->
+        <div class="project__buttons">
+          <a href="https://poke-survey.herokuapp.com/" target="_blank" class="button button--secondary">
+            Site
+          </a>
+          <a href="https://github.com/davidmarknelson/poke-survey" target="_blank" class="button button--secondary">
+            Code
+          </a>
         </div>
       </div>
     </div>
-  </div>
+
+    <!-- ======================================================================= -->
+    <!-- Skills -->
+    <!-- ======================================================================= -->
+    <div class="container line-break__container" id="skills">
+      <h2 class="line-break">
+        <span class="line-break__text">
+          Skills
+        </span>
+      </h2>
+    </div>
+
+    <div class="container">
+      <div class="skills__container">
+        <div class="skills__item">
+          <h3>
+            Front End
+          </h3>
+          <div class="skills__content">
+            <p>
+              HTML5
+            </p>
+            <p>
+              CSS3
+            </p>
+            <p>
+              Javascript / ES6
+            </p>
+            <p>
+              Typescript
+            </p>
+            <p>
+              Angular
+            </p>
+            <p>
+              Angular Material
+            </p>
+            <p>
+              Bootstrap
+            </p>
+            <p>
+              Bulma
+            </p>
+            <p>
+              GraphQL
+            </p>
+          </div>
+        </div>
+
+        <div class="skills__item">
+          <h3>
+            Back End
+          </h3>
+          <div class="skills__content">
+            <p>
+              Node.js
+            </p>
+            <p>
+              NestJS
+            </p>
+            <p>
+              Express
+            </p>
+            <p>
+              PostgreSQL
+            </p>
+            <p>
+              MongoDB
+            </p>
+            <p>
+              Mongoose
+            </p>
+            <p>
+              SQL Server
+            </p>
+            <p>
+              Sequelize
+            </p>
+            <p>
+              TypeORM
+            </p>
+          </div>
+        </div>
+
+        <div class="skills__item">
+          <h3>
+            Testing
+          </h3>
+          <div class="skills__content">
+            <p>
+              Jest
+            </p>
+            <p>
+              Jasmine
+            </p>
+            <p>
+              Cypress
+            </p>
+            <p>
+              Karma
+            </p>
+            <p>
+              Mocha
+            </p>
+            <p>
+              Chai
+            </p>
+          </div>
+        </div>
+
+        <div class="skills__item">
+          <h3>
+            Source Control
+          </h3>
+          <div class="skills__content">
+            <p>
+              Git
+            </p>
+            <p>
+              Github
+            </p>
+          </div>
+        </div>
+
+        <div class="skills__item">
+          <h3>
+            Deployment
+          </h3>
+          <div class="skills__content">
+            <p>
+              Heroku
+            </p>
+            <p>
+              Netlify
+            </p>
+            <p>
+              MongoDB Atlas
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================================================================= -->
+    <!-- Contact -->
+    <!-- ======================================================================= -->
+    <div class="container line-break__container" id="contact">
+      <h2 class="line-break">
+        <span class="line-break__text">
+          Contact
+        </span>
+      </h2>
+    </div>
+
+    <div class="container">
+      <p class="contact">
+        I am available for work. Please contact me at
+        <a class="link" href="mailto:davidmarknelson@protonmail.com" target="_blank">
+          davidmarknelson@protonmail.com</a>.
+      </p>
+
+      <p class="contact">or</p>
+      <div class="contact__icon-container">
+        <a aria-label="Github profile" class="link contact__icons" href="https://github.com/davidmarknelson"
+          target="_blank">
+          <i class="fab fa-github fa-3x"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- ======================================================================= -->
+    <!-- Footer -->
+    <!-- ======================================================================= -->
+    <footer class="footer">
+      <div class="container footer__content-container">
+        <p>
+          You can view the source code for this website
+          <a class="link" href="https://github.com/davidmarknelson/david-portfolio-2" target="_blank">here</a>
+          .
+        </p>
+      </div>
+    </footer>
+
+    <!-- ======================================================================= -->
+    <!-- Scroll to top button -->
+    <!-- ======================================================================= -->
+    <a data-scroll href="#hero" id="toTopButton" title="Go to top" class="floating-shadow">
+      <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <!-- ======================================================================= -->
+    <!-- Image Modal -->
+    <!-- ======================================================================= -->
+    <div id="imgModal" class="modal modal__animate">
+      <!-- The Close Button -->
+      <i class="fas fa-times modal__close" id="closeModalBtn"></i>
+
+      <!-- Modal image container -->
+      <div class="modal__container modal__animate">
+        <div class="glider-contain modal__animate">
+          <div class="glider gliderModal">
+            <figure class="project__image__figure">
+              <img class="project__image__item modalImage"
+                src="./images/projects/share-family-recipes/sfr-p1-compressed.jpg"
+                alt="Share family recipes landing page with search bar" />
+            </figure>
+            <figure class="project__image__figure">
+              <img class="project__image__item modalImage"
+                src="./images/projects/share-family-recipes/sfr-p2-compressed.jpg"
+                alt="Share family recipes list of recipes" />
+            </figure>
+            <figure class="project__image__figure">
+              <img class="project__image__item modalImage"
+                src="./images/projects/share-family-recipes/sfr-p3-compressed.jpg"
+                alt="Share family recipes figma design" />
+            </figure>
+            <figure class="project__image__figure">
+              <img class="project__image__item modalImage"
+                src="./images/projects/share-family-recipes/sfr-p4-compressed.jpg"
+                alt="Share family recipes unit, end-to-end, and back end tests" />
+            </figure>
+          </div>
+
+          <button role="button" aria-label="Previous" class="glider-prev glider-prev-modal">
+            <i class="fa fa-chevron-left"></i>
+          </button>
+          <button role="button" aria-label="Next" class="glider-next glider-next-modal">
+            <i class="fa fa-chevron-right"></i>
+          </button>
+          <div role="tablist" class="dots" id="dots-modal">
+            <button class="glider-dot" data-index="0" aria-label="Page 1"></button>
+            <button class="glider-dot" data-index="1" aria-label="Page 2"></button>
+            <button class="glider-dot" data-index="2" aria-label="Page 3"></button>
+            <button class="glider-dot" data-index="3" aria-label="Page 4"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
 
   <!-- Scripts -->
   <!-- ========================== -->
